@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
 
 export function LoginForm({
   className,
@@ -20,7 +21,7 @@ export function LoginForm({
         <CardHeader>
           <CardTitle className="text-2xl">Login</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            Enter your email address and password
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -53,6 +54,10 @@ export function LoginForm({
               >
                 Login
               </Button>
+              <Separator />
+              <div>
+                <p className="text-center text-sm">or create new account</p>
+              </div>
               <div className="grid grid-cols-3 gap-4">
                 <Button variant="outline" className="w-full">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -82,15 +87,6 @@ export function LoginForm({
                   <span className="sr-only">Login with Meta</span>
                 </Button>
               </div>
-            </div>
-            <div className="mt-4 text-center text-sm">
-              Don&apos;t have an account?{" "}
-              <a
-                href="#"
-                className="underline underline-offset-4 hover:text-blue-700"
-              >
-                Sign up
-              </a>
             </div>
           </form>
         </CardContent>
