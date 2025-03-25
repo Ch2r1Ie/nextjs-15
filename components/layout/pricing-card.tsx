@@ -13,17 +13,6 @@ import { Switch } from "@/components/ui/switch";
 import { CheckIcon } from "lucide-react";
 import React from "react";
 
-interface PlanFeature {
-  type: string;
-  features: {
-    name: string;
-    free: boolean;
-    startup: boolean;
-    team: boolean;
-    enterprise: boolean;
-  }[];
-}
-
 export default function PricingSectionCards() {
   return (
     <>
