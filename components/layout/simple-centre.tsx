@@ -23,7 +23,9 @@ export default function HeroSectionSimpleCentred() {
               <Link href="/pricing">Get started</Link>
             </Button>
             <Button size={"lg"} variant={"outline"}>
-              Learn more
+              <Link href="https://shadcn-ui-blocks.vercel.app/">
+                Learn more
+              </Link>
             </Button>
           </div>
           <div className="mt-5 flex justify-center items-center gap-x-1 sm:gap-x-3">
