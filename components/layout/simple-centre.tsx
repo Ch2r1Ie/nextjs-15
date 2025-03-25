@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRightIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function HeroSectionSimpleCentred() {
   return (
@@ -18,7 +19,9 @@ export default function HeroSectionSimpleCentred() {
             </p>
           </div>
           <div className="mt-8 gap-3 flex justify-center">
-            <Button size={"lg"}>Get started</Button>
+            <Button size={"lg"}>
+              <Link href="/pricing">Get started</Link>
+            </Button>
             <Button size={"lg"} variant={"outline"}>
               Learn more
             </Button>

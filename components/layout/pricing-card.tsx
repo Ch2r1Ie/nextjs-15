@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { CheckIcon } from "lucide-react";
 import React from "react";
+import Link from "next/link";
 
 export default function PricingSectionCards() {
   return (
@@ -80,7 +81,7 @@ export default function PricingSectionCards() {
             </CardContent>
             <CardFooter>
               <Button className="w-full" variant={"outline"}>
-                Sign up
+                <Link href="/login">Sign up</Link>
               </Button>
             </CardFooter>
           </Card>
@@ -112,7 +113,9 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">Sign up</Button>
+              <Button className="w-full">
+                <Link href="/login">Sign up</Link>
+              </Button>
             </CardFooter>
           </Card>
           <Card className="flex flex-col">
@@ -141,7 +144,7 @@ export default function PricingSectionCards() {
             </CardContent>
             <CardFooter>
               <Button className="w-full" variant={"outline"}>
-                Sign up
+                <Link href="/login">Sign up</Link>
               </Button>
             </CardFooter>
           </Card>
@@ -171,7 +174,7 @@ export default function PricingSectionCards() {
             </CardContent>
             <CardFooter>
               <Button className="w-full" variant={"outline"}>
-                Sign up
+                <Link href="/login">Sign up</Link>
               </Button>
             </CardFooter>
           </Card>
