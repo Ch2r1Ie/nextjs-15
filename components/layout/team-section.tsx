@@ -7,8 +7,7 @@ const teamMembers = [
     name: "John Doe",
     title: "Founder & CEO",
     bio: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
-    imageUrl:
-      "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=600",
+    imageUrl: "/assets/thanawat.jpg",
   },
   {
     name: "Bob Smith",
@@ -35,9 +34,9 @@ const teamMembers = [
 
 const Team05Page = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-8 sm:py-12 px-6 lg:px-8 max-w-screen-xl mx-auto gap-16">
-      <div className="text-center max-w-2xl mx-auto">
-        <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
+    <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-16 px-6 py-8 sm:py-12 lg:px-8">
+      <div className="mx-auto max-w-2xl text-center">
+        <h2 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
           Meet Our Team
         </h2>
         <p className="mt-6 text-base sm:text-lg">
@@ -46,13 +45,13 @@ const Team05Page = () => {
         </p>
       </div>
 
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
+      <div className="grid w-full grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-4">
         {teamMembers.map((member) => (
           <div key={member.name}>
             <img
               src={member.imageUrl}
               alt={member.name}
-              className="w-full aspect-square rounded-lg object-cover bg-secondary"
+              className="bg-secondary aspect-square w-full rounded-lg object-cover"
               width={600}
               height={600}
             />
