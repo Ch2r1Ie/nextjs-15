@@ -82,14 +82,13 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Link href="/login">
-                <Button
-                  className="w-full hover:text-accent-foreground cursor-pointer"
-                  variant={"outline"}
-                >
-                  Sign up
-                </Button>
-              </Link>
+              <Button
+                className="w-full hover:text-accent-foreground cursor-pointer"
+                variant={"outline"}
+              >
+                {" "}
+                <Link href="/login">Sign up </Link>
+              </Button>
             </CardFooter>
           </Card>
           <Card className="border-primary flex flex-col">
@@ -120,14 +119,14 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Link href="/login">
-                <Button
-                  variant="default"
-                  className="w-full hover:text-accent-foreground cursor-pointer"
-                >
-                  Sign up
-                </Button>
-              </Link>
+              <Button
+                variant="default"
+                className="w-full hover:text-accent-foreground cursor-pointer"
+              >
+                {" "}
+                <Link href="/login"> </Link>
+                Sign up
+              </Button>
             </CardFooter>
           </Card>
           <Card className="flex flex-col">
@@ -155,14 +154,12 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Link href="/login">
-                <Button
-                  className="w-full hover:text-accent-foreground cursor-pointer"
-                  variant={"outline"}
-                >
-                  Sign up
-                </Button>
-              </Link>
+              <Button
+                className="w-full hover:text-accent-foreground cursor-pointer"
+                variant={"outline"}
+              >
+                <Link href="/login">Sign up </Link>
+              </Button>
             </CardFooter>
           </Card>
           <Card className="flex flex-col">
@@ -190,14 +187,12 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Link href="/login">
-                <Button
-                  className="w-full hover:text-accent-foreground cursor-pointer"
-                  variant={"outline"}
-                >
-                  Sign up
-                </Button>
-              </Link>
+              <Button
+                className="w-full hover:text-accent-foreground cursor-pointer"
+                variant={"outline"}
+              >
+                <Link href="/login">Sign up</Link>
+              </Button>
             </CardFooter>
           </Card>
         </div>
