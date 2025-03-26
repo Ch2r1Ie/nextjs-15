@@ -18,10 +18,10 @@ export default function HeroSectionSimpleCentred() {
               UI projects and customize to your heart&apos;s content.
             </p>
           </div>
-          <div className="mt-8 gap-3 flex justify-center">
-            <Button size={"lg"}>
-              <Link href="/home">Get started</Link>
-            </Button>
+          <div className="mt-8 gap-5 flex justify-center">
+            <Link href="/home">
+              <Button size={"lg"}>Get started</Button>
+            </Link>
             <Button size={"lg"} variant={"outline"}>
               Learn more
             </Button>

@@ -32,7 +32,7 @@ const features = [
 
 export default function FeatureSectionSimple() {
   return (
-    <section className="flex items-center justify-center mt-20 p-8">
+    <section className="flex items-center justify-center mt-50 p-8">
       <div className="text-center space-y-8 w-full max-w-6xl">
         <div className="space-y-4">
           <h2 className="text-3xl font-bold">
