@@ -1,10 +1,10 @@
-import { Navbar1 } from "@/components/layout/navbar";
 import React from "react";
+import { MenubarDemo } from "@/components/layout/menubar";
 
 const Welcome = () => {
   return (
-    <div className="flex justify-center items-center">
-      <Navbar1 />
+    <div className="flex justify-center items-center mt-10">
+      <MenubarDemo />
     </div>
   );
 };
