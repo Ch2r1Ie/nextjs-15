@@ -6,7 +6,7 @@ export default function HeroSectionSimpleCentred() {
   return (
     <>
       <div>
-        <div className="container py-24 lg:py-32">
+        <div className="container p-24 lg:py-32">
           <div className="mt-5 max-w-2xl text-center mx-auto">
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
               Let&apos;s Build Together
