@@ -32,25 +32,25 @@ const features = [
 
 export default function FeatureSectionSimple() {
   return (
-    <section className="flex items-center justify-center mt-50 p-8">
-      <div className="text-center space-y-8 w-full max-w-6xl">
+    <section className="mt-50 flex items-center justify-center p-8">
+      <div className="w-full max-w-6xl space-y-8 text-center">
         <div className="space-y-4">
           <h2 className="text-3xl font-bold">
             Features that make you productive
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground mx-auto max-w-2xl">
             Everything you need to get your work done efficiently and
             effectively. Built for developers, designed for success.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <Card key={feature.title}>
-              <CardContent className="p-6 space-y-2">
-                <feature.icon className="h-12 w-12 text-primary" />
+              <CardContent className="space-y-2 p-6">
+                <feature.icon className="text-primary m-auto mb-10 h-12 w-12" />
                 <h3 className="font-bold">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   {feature.description}
                 </p>
               </CardContent>
