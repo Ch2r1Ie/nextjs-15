@@ -7,18 +7,18 @@ export default function HeroSectionSimpleCentred() {
     <>
       <div>
         <div className="container mt-15 p-24 lg:py-32">
-          <div className="mt-5 max-w-2xl text-center mx-auto">
+          <div className="mx-auto mt-5 max-w-2xl text-center">
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
               Let&apos;s Build Together
             </h1>
           </div>
-          <div className="mt-5 max-w-3xl text-center mx-auto">
-            <p className="text-xl text-muted-foreground">
+          <div className="mx-auto mt-5 max-w-3xl text-center">
+            <p className="text-muted-foreground text-xl">
               Over 10+ fully responsive, UI blocks you can drop into your Shadcn
               UI projects and customize to your heart&apos;s content.
             </p>
           </div>
-          <div className="mt-8 gap-5 flex justify-center">
+          <div className="mt-8 flex justify-center gap-5">
             <Link href="/home">
               <Button size={"lg"}>Get started</Button>
             </Link>
@@ -26,13 +26,13 @@ export default function HeroSectionSimpleCentred() {
               Learn more
             </Button>
           </div>
-          <div className="mt-5 flex justify-center items-center gap-x-1 sm:gap-x-3">
-            <span className="text-sm text-muted-foreground">
+          <div className="mt-5 flex items-center justify-center gap-x-1 sm:gap-x-3">
+            <span className="text-muted-foreground text-sm">
               Package Manager:
             </span>
             <span className="text-sm font-bold">npm </span>
             <svg
-              className="h-5 w-5 text-muted-foreground"
+              className="text-muted-foreground h-5 w-5"
               width={16}
               height={16}
               viewBox="0 0 16 16"
@@ -47,11 +47,11 @@ export default function HeroSectionSimpleCentred() {
               />
             </svg>
             <a
-              className="inline-flex items-center gap-x-1 text-sm decoration-2 hover:underline font-medium"
+              className="inline-flex items-center gap-x-1 text-sm font-medium decoration-2 hover:underline"
               href="#"
             >
               Installation Guide
-              <ChevronRightIcon className="flex-shrink-0 w-4 h-4" />
+              <ChevronRightIcon className="h-4 w-4 flex-shrink-0" />
             </a>
           </div>
         </div>
