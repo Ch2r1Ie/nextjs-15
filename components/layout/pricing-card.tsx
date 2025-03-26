@@ -20,25 +20,25 @@ export default function PricingSectionCards() {
   return (
     <>
       <div className="container py-24 lg:py-32">
-        <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+        <div className="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
           <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
             Pricing
           </h2>
-          <p className="mt-1 text-muted-foreground">
+          <p className="text-muted-foreground mt-1">
             Whatever your status, our offers evolve according to your needs.
           </p>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex items-center justify-center">
           <Label htmlFor="payment-schedule" className="me-3">
             Monthly
           </Label>
           <Switch id="payment-schedule" />
           <Label htmlFor="payment-schedule" className="relative ms-3">
             Annual
-            <span className="absolute -top-10 start-auto -end-28">
+            <span className="absolute start-auto -end-28 -top-10">
               <span className="flex items-center">
                 <svg
-                  className="w-14 h-8 -me-6"
+                  className="-me-6 h-8 w-14"
                   width={45}
                   height={25}
                   viewBox="0 0 45 25"
@@ -56,11 +56,11 @@ export default function PricingSectionCards() {
             </span>
           </Label>
         </div>
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:items-center">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:items-center">
           <Card className="flex flex-col">
-            <CardHeader className="text-center pb-2">
+            <CardHeader className="pb-2 text-center">
               <CardTitle className="mb-7">Free</CardTitle>
-              <span className="font-bold text-5xl">Free</span>
+              <span className="text-5xl font-bold">Free</span>
             </CardHeader>
             <CardDescription className="text-center">
               Forever free
@@ -68,54 +68,44 @@ export default function PricingSectionCards() {
             <CardContent className="flex-1">
               <ul className="mt-7 space-y-2.5 text-sm">
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">1 user</span>
                 </li>
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">Plan features</span>
                 </li>
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">Product support</span>
                 </li>
               </ul>
             </CardContent>
-            <Link href="/login">
-              <CardFooter>
-                <Button
-                  className="w-full hover:text-accent-foreground cursor-pointer"
-                  variant={"outline"}
-                >
-                  {" "}
-                  Sign up
-                </Button>
-              </CardFooter>
-            </Link>
+            <Link href="/login"></Link>
           </Card>
           <Card className="border-primary flex flex-col">
-            <CardHeader className="text-center pb-2">
-              <Badge className="uppercase w-max self-center mb-3">
+            <CardHeader className="pb-2 text-center">
+              <Badge className="mb-3 w-max self-center uppercase">
                 Most popular
               </Badge>
               <CardTitle className="!mb-7">Startup</CardTitle>
-              <span className="font-bold text-5xl">£39</span>
+              <span className="text-5xl font-bold">£39</span>
             </CardHeader>
-            <CardDescription className="text-center w-11/12 mx-auto">
+            <CardDescription className="mx-auto w-11/12 text-center">
               All the basics for starting a new business
             </CardDescription>
             <CardContent className="flex-1">
               <ul className="mt-7 space-y-2.5 text-sm">
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">2 user</span>
                 </li>
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">Plan features</span>
                 </li>
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">Product support</span>
                 </li>
               </ul>
@@ -124,34 +114,33 @@ export default function PricingSectionCards() {
               <CardFooter>
                 <Button
                   variant="default"
-                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  className="w-full cursor-pointer hover:text-white"
                 >
-                  {" "}
                   Sign up
                 </Button>
               </CardFooter>
             </Link>
           </Card>
           <Card className="flex flex-col">
-            <CardHeader className="text-center pb-2">
+            <CardHeader className="pb-2 text-center">
               <CardTitle className="mb-7">Team</CardTitle>
-              <span className="font-bold text-5xl">£89</span>
+              <span className="text-5xl font-bold">£89</span>
             </CardHeader>
-            <CardDescription className="text-center  w-11/12 mx-auto">
+            <CardDescription className="mx-auto w-11/12 text-center">
               Everything you need for a growing business
             </CardDescription>
             <CardContent className="flex-1">
               <ul className="mt-7 space-y-2.5 text-sm">
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">5 user</span>
                 </li>
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">Plan features</span>
                 </li>
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">Product support</span>
                 </li>
               </ul>
@@ -159,7 +148,7 @@ export default function PricingSectionCards() {
             <Link href="/login">
               <CardFooter>
                 <Button
-                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  className="hover:text-accent-foreground w-full cursor-pointer"
                   variant={"outline"}
                 >
                   Sign up
@@ -168,25 +157,25 @@ export default function PricingSectionCards() {
             </Link>
           </Card>
           <Card className="flex flex-col">
-            <CardHeader className="text-center pb-2">
+            <CardHeader className="pb-2 text-center">
               <CardTitle className="mb-7">Enterprise</CardTitle>
-              <span className="font-bold text-5xl">149</span>
+              <span className="text-5xl font-bold">149</span>
             </CardHeader>
-            <CardDescription className="text-center  w-11/12 mx-auto">
+            <CardDescription className="mx-auto w-11/12 text-center">
               Advanced features for scaling your business
             </CardDescription>
             <CardContent>
               <ul className="mt-7 space-y-2.5 text-sm">
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">10 user</span>
                 </li>
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">Plan features</span>
                 </li>
                 <li className="flex space-x-2">
-                  <CheckIcon className="flex-shrink-0 mt-0.5 h-4 w-4" />
+                  <CheckIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-muted-foreground">Product support</span>
                 </li>
               </ul>
@@ -194,7 +183,7 @@ export default function PricingSectionCards() {
             <Link href="/login">
               <CardFooter>
                 <Button
-                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  className="hover:text-accent-foreground w-full cursor-pointer"
                   variant={"outline"}
                 >
                   Sign up
