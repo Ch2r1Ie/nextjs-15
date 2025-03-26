@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSectionSimpleCentred from "@/components/layout/simple-centre";
-import IconSection2ColsGrid from "@/components/layout/icons-section";
 import Team05Page from "@/components/layout/team-section";
 import FeatureSectionSimple from "@/components/layout/feature-section";
 
