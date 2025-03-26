@@ -45,7 +45,7 @@ export function LoginForm({
               </div>
               <Button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-500 hover:text-accent-foreground cursor-pointer"
+                className="w-full cursor-pointer bg-blue-600 hover:bg-blue-500 hover:text-white"
               >
                 Login
               </Button>
@@ -56,7 +56,7 @@ export function LoginForm({
               <div className="grid grid-cols-3 gap-4">
                 <Button
                   variant="outline"
-                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  className="hover:text-accent-foreground w-full cursor-pointer"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -68,7 +68,7 @@ export function LoginForm({
                 </Button>
                 <Button
                   variant="outline"
-                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  className="hover:text-accent-foreground w-full cursor-pointer"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -80,7 +80,7 @@ export function LoginForm({
                 </Button>
                 <Button
                   variant="outline"
-                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  className="hover:text-accent-foreground w-full cursor-pointer"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
