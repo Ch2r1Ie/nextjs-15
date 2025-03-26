@@ -13,20 +13,17 @@ import {
   // MenubarSubTrigger,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export function MenubarDemo() {
-  const router = useRouter();
-
   return (
     <Menubar className="flex justify-center items-center p-6">
       <MenubarMenu>
-        <MenubarTrigger
-          className="hover:text-accent-foreground cursor-pointer"
-          onClick={() => router.push("/")}
-        >
-          Home
-        </MenubarTrigger>
+        <Link href="/">
+          <MenubarTrigger className="hover:text-accent-foreground cursor-pointer">
+            Home
+          </MenubarTrigger>
+        </Link>
       </MenubarMenu>
       <MenubarMenu>
         <MenubarTrigger className="hover:text-accent-foreground cursor-pointer">
@@ -56,12 +53,11 @@ export function MenubarDemo() {
         </MenubarContent>
       </MenubarMenu>
       <MenubarMenu>
-        <MenubarTrigger
-          className="hover:text-accent-foreground cursor-pointer"
-          onClick={() => router.push("/pricing")}
-        >
-          Pricing
-        </MenubarTrigger>
+        <Link href="/pricing">
+          <MenubarTrigger className="hover:text-accent-foreground cursor-pointer">
+            Pricing
+          </MenubarTrigger>
+        </Link>
       </MenubarMenu>
     </Menubar>
   );

@@ -14,11 +14,9 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { CheckIcon } from "lucide-react";
 import React from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function PricingSectionCards() {
-  const router = useRouter();
-
   return (
     <>
       <div className="container py-24 lg:py-32">
@@ -84,13 +82,14 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button
-                className="w-full hover:text-accent-foreground cursor-pointer"
-                variant={"outline"}
-                onClick={() => router.push("/login")}
-              >
-                Sign up
-              </Button>
+              <Link href="/login">
+                <Button
+                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  variant={"outline"}
+                >
+                  Sign up
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
           <Card className="border-primary flex flex-col">
@@ -121,13 +120,14 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button
-                variant="default"
-                className="w-full hover:text-accent-foreground cursor-pointer"
-                onClick={() => router.push("/login")}
-              >
-                Sign up
-              </Button>
+              <Link href="/login">
+                <Button
+                  variant="default"
+                  className="w-full hover:text-accent-foreground cursor-pointer"
+                >
+                  Sign up
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
           <Card className="flex flex-col">
@@ -155,13 +155,14 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button
-                className="w-full hover:text-accent-foreground cursor-pointer"
-                variant={"outline"}
-                onClick={() => router.push("/login")}
-              >
-                Sign up
-              </Button>
+              <Link href="/login">
+                <Button
+                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  variant={"outline"}
+                >
+                  Sign up
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
           <Card className="flex flex-col">
@@ -189,13 +190,14 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button
-                className="w-full hover:text-accent-foreground cursor-pointer"
-                variant={"outline"}
-                onClick={() => router.push("/login")}
-              >
-                Sign up
-              </Button>
+              <Link href="/login">
+                <Button
+                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  variant={"outline"}
+                >
+                  Sign up
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </div>
