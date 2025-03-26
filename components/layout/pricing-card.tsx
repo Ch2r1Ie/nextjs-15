@@ -89,7 +89,7 @@ export default function PricingSectionCards() {
                 Most popular
               </Badge>
               <CardTitle className="!mb-7">Startup</CardTitle>
-              <span className="text-5xl font-bold">£39</span>
+              <span className="text-5xl font-bold">$1</span>
             </CardHeader>
             <CardDescription className="mx-auto w-11/12 text-center">
               All the basics for starting a new business
@@ -110,7 +110,7 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <Link href="/login">
+            <Link href="https://buy.stripe.com/aEU6rf3NhegqdpucMN">
               <CardFooter>
                 <Button
                   variant="default"
