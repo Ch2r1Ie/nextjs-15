@@ -81,15 +81,17 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button
-                className="w-full hover:text-accent-foreground cursor-pointer"
-                variant={"outline"}
-              >
-                {" "}
-                <Link href="/login">Sign up </Link>
-              </Button>
-            </CardFooter>
+            <Link href="/login">
+              <CardFooter>
+                <Button
+                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  variant={"outline"}
+                >
+                  {" "}
+                  Sign up
+                </Button>
+              </CardFooter>
+            </Link>
           </Card>
           <Card className="border-primary flex flex-col">
             <CardHeader className="text-center pb-2">
@@ -118,16 +120,17 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button
-                variant="default"
-                className="w-full hover:text-accent-foreground cursor-pointer"
-              >
-                {" "}
-                <Link href="/login"> </Link>
-                Sign up
-              </Button>
-            </CardFooter>
+            <Link href="/login">
+              <CardFooter>
+                <Button
+                  variant="default"
+                  className="w-full hover:text-accent-foreground cursor-pointer"
+                >
+                  {" "}
+                  Sign up
+                </Button>
+              </CardFooter>
+            </Link>
           </Card>
           <Card className="flex flex-col">
             <CardHeader className="text-center pb-2">
@@ -153,14 +156,16 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button
-                className="w-full hover:text-accent-foreground cursor-pointer"
-                variant={"outline"}
-              >
-                <Link href="/login">Sign up </Link>
-              </Button>
-            </CardFooter>
+            <Link href="/login">
+              <CardFooter>
+                <Button
+                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  variant={"outline"}
+                >
+                  Sign up
+                </Button>
+              </CardFooter>
+            </Link>
           </Card>
           <Card className="flex flex-col">
             <CardHeader className="text-center pb-2">
@@ -186,14 +191,16 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button
-                className="w-full hover:text-accent-foreground cursor-pointer"
-                variant={"outline"}
-              >
-                <Link href="/login">Sign up</Link>
-              </Button>
-            </CardFooter>
+            <Link href="/login">
+              <CardFooter>
+                <Button
+                  className="w-full hover:text-accent-foreground cursor-pointer"
+                  variant={"outline"}
+                >
+                  Sign up
+                </Button>
+              </CardFooter>
+            </Link>
           </Card>
         </div>
       </div>
