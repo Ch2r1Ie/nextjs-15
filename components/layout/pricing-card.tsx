@@ -85,7 +85,7 @@ export default function PricingSectionCards() {
             </CardContent>
             <CardFooter>
               <Button
-                className="w-full"
+                className="w-full hover:text-accent-foreground cursor-pointer"
                 variant={"outline"}
                 onClick={() => router.push("/login")}
               >
@@ -121,7 +121,11 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full" onClick={() => router.push("/login")}>
+              <Button
+                variant="default"
+                className="w-full hover:text-accent-foreground cursor-pointer"
+                onClick={() => router.push("/login")}
+              >
                 Sign up
               </Button>
             </CardFooter>
@@ -152,7 +156,7 @@ export default function PricingSectionCards() {
             </CardContent>
             <CardFooter>
               <Button
-                className="w-full"
+                className="w-full hover:text-accent-foreground cursor-pointer"
                 variant={"outline"}
                 onClick={() => router.push("/login")}
               >
@@ -186,7 +190,7 @@ export default function PricingSectionCards() {
             </CardContent>
             <CardFooter>
               <Button
-                className="w-full"
+                className="w-full hover:text-accent-foreground cursor-pointer"
                 variant={"outline"}
                 onClick={() => router.push("/login")}
               >
