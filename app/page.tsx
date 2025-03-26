@@ -5,7 +5,7 @@ import FeatureSectionSimple from "@/components/layout/feature-section";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen mt-20 py-6 px-6 scroll-smooth">
+    <div className="flex flex-col justify-center items-center min-h-screen py-6 px-6 scroll-smooth">
       <HeroSectionSimpleCentred />
       <FeatureSectionSimple />
       <Team05Page />
