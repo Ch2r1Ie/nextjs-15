@@ -84,9 +84,9 @@ const Logos3 = ({
   return (
     <section className="py-10 ">
       <div className="container flex flex-col items-center text-center">
-        <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
+        <h1 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
           {heading}
-        </h2>
+        </h1>
       </div>
       <div className="pt-10 md:pt-16 lg:pt-10">
         <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
