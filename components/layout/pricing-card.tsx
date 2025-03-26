@@ -12,9 +12,11 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { CheckIcon } from "lucide-react";
 import React from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function PricingSectionCards() {
+  const router = useRouter();
+
   return (
     <>
       <div className="container py-24 lg:py-32">
@@ -80,8 +82,12 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full" variant={"outline"}>
-                <Link href="/login">Sign up</Link>
+              <Button
+                className="w-full"
+                variant={"outline"}
+                onClick={() => router.push("/login")}
+              >
+                Sign up
               </Button>
             </CardFooter>
           </Card>
@@ -113,8 +119,8 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">
-                <Link href="/login">Sign up</Link>
+              <Button className="w-full" onClick={() => router.push("/login")}>
+                Sign up
               </Button>
             </CardFooter>
           </Card>
@@ -143,8 +149,12 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full" variant={"outline"}>
-                <Link href="/login">Sign up</Link>
+              <Button
+                className="w-full"
+                variant={"outline"}
+                onClick={() => router.push("/login")}
+              >
+                Sign up
               </Button>
             </CardFooter>
           </Card>
@@ -173,8 +183,12 @@ export default function PricingSectionCards() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full" variant={"outline"}>
-                <Link href="/login">Sign up</Link>
+              <Button
+                className="w-full"
+                variant={"outline"}
+                onClick={() => router.push("/login")}
+              >
+                Sign up
               </Button>
             </CardFooter>
           </Card>
