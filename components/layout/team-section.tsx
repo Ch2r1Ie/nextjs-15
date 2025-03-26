@@ -4,10 +4,11 @@ import Link from "next/link";
 
 const teamMembers = [
   {
-    name: "Thanawat Flukey.",
+    name: "Thannathon Prem.",
     title: "Founder & CEO",
     bio: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
-    imageUrl: "/assets/thanawat.jpg",
+    imageUrl:
+      "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     name: "Bob Smith",
@@ -17,18 +18,18 @@ const teamMembers = [
       "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
-    name: "Peter Johnson",
+    name: "Thanawat Flukey.",
     title: "Frontend Developer",
     bio: "Former frontend dev for Linear, Coinbase, and Postscript.",
     imageUrl:
-      "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     name: "Michael Brown",
     title: "UX Researcher",
     bio: "Lead user research for Slack. Contractor for Netflix and Udacity.",
     imageUrl:
-      "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 ];
 
