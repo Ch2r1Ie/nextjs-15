@@ -20,7 +20,7 @@ export default function HeroSectionSimpleCentred() {
           </div>
           <div className="mt-8 gap-3 flex justify-center">
             <Button size={"lg"}>
-              <Link href="/pricing">Get started</Link>
+              <Link href="/home">Get started</Link>
             </Button>
             <Button size={"lg"} variant={"outline"}>
               <Link href="https://shadcn-ui-blocks.vercel.app/">
