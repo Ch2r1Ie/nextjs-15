@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const teamMembers = [
   {
-    name: "John Doe",
+    name: "Thanawat Flukey.",
     title: "Founder & CEO",
     bio: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
     imageUrl: "/assets/thanawat.jpg",
