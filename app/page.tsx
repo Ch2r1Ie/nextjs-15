@@ -7,7 +7,7 @@ import { Logos3 } from "@/components/layout/logos";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen py-6 px-6 scroll-smooth">
+    <div className="flex min-h-screen flex-col items-center justify-center scroll-smooth px-6 py-6">
       <HeroSectionSimpleCentred />
       <FeatureSectionSimple />
       <CardGroup />
