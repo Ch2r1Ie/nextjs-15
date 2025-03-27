@@ -3,7 +3,7 @@ import { MenubarDemo } from "@/components/layout/menubar";
 
 const Welcome = () => {
   return (
-    <div className="flex justify-center items-center mt-10">
+    <div className="mt-10 flex items-center justify-center">
       <MenubarDemo />
     </div>
   );
