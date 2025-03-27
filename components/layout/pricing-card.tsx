@@ -81,7 +81,6 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <Link href="https://buy.stripe.com/aEU6rf3NhegqdpucMN"></Link>
           </Card>
           <Card className="border-primary flex flex-col">
             <CardHeader className="pb-2 text-center">
@@ -110,7 +109,7 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <Link href="/login">
+            <Link href="https://buy.stripe.com/aEU6rf3NhegqdpucMN">
               <CardFooter>
                 <Button
                   variant="default"
