@@ -7,7 +7,8 @@ const teamMembers = [
     name: "John Doe",
     title: "Founder & CEO",
     bio: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
-    imageUrl: "/assets/thanawat.jpg",
+    imageUrl:
+      "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     name: "Bob Smith",

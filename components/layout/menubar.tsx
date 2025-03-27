@@ -17,7 +17,7 @@ import Link from "next/link";
 
 export function MenubarDemo() {
   return (
-    <Menubar className="flex justify-center items-center p-6">
+    <Menubar className="flex items-center justify-center p-6">
       <MenubarMenu>
         <Link href="/">
           <MenubarTrigger className="hover:text-accent-foreground cursor-pointer">
@@ -29,12 +29,29 @@ export function MenubarDemo() {
         <MenubarTrigger className="hover:text-accent-foreground cursor-pointer">
           Edit
         </MenubarTrigger>
+        <MenubarContent className="mt-2">
+          <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
+          <MenubarCheckboxItem checked>
+            Always Show Full URLs
+          </MenubarCheckboxItem>
+          <MenubarSeparator />
+          <MenubarItem inset>
+            Reload <MenubarShortcut>⌘R</MenubarShortcut>
+          </MenubarItem>
+          <MenubarItem disabled inset>
+            Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
+          </MenubarItem>
+          <MenubarSeparator />
+          <MenubarItem inset>Toggle Fullscreen</MenubarItem>
+          <MenubarSeparator />
+          <MenubarItem inset>Hide Sidebar</MenubarItem>
+        </MenubarContent>
       </MenubarMenu>
       <MenubarMenu>
         <MenubarTrigger className="hover:text-accent-foreground cursor-pointer">
           Features
         </MenubarTrigger>
-        <MenubarContent>
+        <MenubarContent className="mt-2">
           <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
           <MenubarCheckboxItem checked>
             Always Show Full URLs
