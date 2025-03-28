@@ -20,7 +20,7 @@ export default function HeroSectionSimpleCentred() {
           </div>
           <div className="mt-8 flex justify-center gap-5">
             <Link href="/home">
-              <Button className="cursor-pointer hover:bg-gray-700" size={"lg"}>
+              <Button className="bg-red-500 cursor-pointer hover:bg-gray-700" size={"lg"}>
                 Get started
               </Button>
             </Link>
