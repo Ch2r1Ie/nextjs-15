@@ -22,8 +22,9 @@ export function LoginForm({
             Log in or sign up in seconds
           </CardTitle>
           <CardDescription>
-            Use your email or another service to continue with MyCompany's (it’s
-            free)!
+            {
+              "Use your email or another service to continue with MyCompany's (it’s free)!"
+            }
           </CardDescription>
         </CardHeader>
         <CardContent>
