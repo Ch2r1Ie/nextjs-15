@@ -11,7 +11,7 @@ export default function Login() {
         className="-z-10 object-cover object-center"
         priority
       />
-      <div className="w-full max-w-md rounded-xl bg-white/80 p-6 shadow-xl backdrop-blur-sm">
+      <div className="w-full max-w-md rounded-xl p-6 shadow-xl backdrop-blur-sm">
         <LoginForm />
       </div>
     </div>
