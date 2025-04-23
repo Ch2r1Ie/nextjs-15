@@ -48,7 +48,7 @@ export function LoginForm({
               </Button>
             </div>
             <div className="text-muted-foreground mt-4 text-center text-sm">
-              By continuing, you agree to MyCompany's{" "}
+              {"By continuing, you agree to MyCompany's "}
               <a
                 href="/terms"
                 className="text-black underline underline-offset-4"
