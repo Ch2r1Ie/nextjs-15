@@ -49,17 +49,11 @@ export function LoginForm({
             </div>
             <div className="text-muted-foreground mt-4 text-center text-sm">
               {"By continuing, you agree to MyCompany's "}
-              <a
-                href="/terms"
-                className="text-black underline underline-offset-4"
-              >
+              <a className="text-black underline underline-offset-4">
                 Terms of Use
               </a>{" "}
               and{" "}
-              <a
-                href="/privacy"
-                className="text-black underline underline-offset-4"
-              >
+              <a className="text-black underline underline-offset-4">
                 Privacy Policy
               </a>
               .
