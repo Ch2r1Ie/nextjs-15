@@ -109,7 +109,7 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <Link href="https://buy.stripe.com/aEU6rf3NhegqdpucMN">
+            <Link href="/login">
               <CardFooter>
                 <Button
                   variant="default"
