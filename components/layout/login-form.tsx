@@ -10,8 +10,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { FcGoogle } from "react-icons/fc";
-import { FaFacebook, FaGithub, FaDiscord } from "react-icons/fa";
+import { FaGithub, FaDiscord } from "react-icons/fa";
 import { handleGoogleSignIn } from "@/actions/(auth)/use-googleSignIn";
+import { handleGithubSignIn } from "@/actions/(auth)/use-githubSignIn";
+import { handleDiscordSignIn } from "@/actions/(auth)/use-discordSignIn";
 
 export function LoginForm({
   className,
@@ -43,18 +45,25 @@ export function LoginForm({
                   <FcGoogle className="mr-2 h-6 w-6" />
                   <span>Continue with Google</span>
                 </Button>
-
-                <Button variant="outline" className="w-full" type="button">
-                  <FaFacebook className="mr-2 h-6 w-6 text-[#1877F2]" />
-                  <span>Continue with Facebook</span>
-                </Button>
-
-                <Button variant="outline" className="w-full" type="button">
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  type="button"
+                  onClick={async () => {
+                    await handleGithubSignIn();
+                  }}
+                >
                   <FaGithub className="mr-2 h-6 w-6" />
                   <span>Continue with GitHub</span>
                 </Button>
-
-                <Button variant="outline" className="w-full" type="button">
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  type="button"
+                  onClick={async () => {
+                    await handleDiscordSignIn();
+                  }}
+                >
                   <FaDiscord className="mr-2 h-6 w-6 text-[#5865F2]" />
                   <span>Continue with Discord</span>
                 </Button>

@@ -1,5 +1,7 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
+import Github from "next-auth/providers/github";
+import Discord from "next-auth/providers/discord";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   trustHost: true,
@@ -8,11 +10,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60,
   },
-  providers: [
-    Google({
-      clientId: process.env.AUTH_GOOGLE_ID,
-      clientSecret: process.env.AUTH_GOOGLE_SECRET,
-      allowDangerousEmailAccountLinking: true,
-    }),
-  ],
+  providers: [Google, Github, Discord],
 });
