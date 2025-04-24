@@ -76,9 +76,8 @@ export function LoginForm({
                 </a>{" "}
                 and{" "}
                 <a className="text-black underline underline-offset-4">
-                  Privacy Policy
+                  Privacy Policy.
                 </a>
-                .
               </div>
             </div>
           </div>
