@@ -1,19 +1,15 @@
-import Image from "next/image";
-import { LoginForm } from "@/components/layout/login-form";
+import { isAuthenticated } from "@/actions/(auth)/use-authenticate";
+import Login from "./login";
+import { redirect } from "next/navigation";
 
-export default function Login() {
-  return (
-    <div className="relative flex min-h-svh w-full items-center justify-center p-6 md:p-10">
-      <Image
-        src="/assets/auth-background.jpg"
-        alt="Background"
-        fill
-        className="-z-10 object-cover object-center"
-        priority
-      />
-      <div className="w-full max-w-md rounded-xl p-2 shadow-xl backdrop-blur-md">
-        <LoginForm />
-      </div>
-    </div>
-  );
-}
+const SignIn: React.FC = async () => {
+  const authenticated = await isAuthenticated();
+
+  if (authenticated) {
+    redirect("/home");
+  } else {
+    return <Login />;
+  }
+};
+
+export default SignIn;
