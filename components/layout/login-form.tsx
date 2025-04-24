@@ -11,9 +11,11 @@ import {
 } from "@/components/ui/card";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub, FaDiscord } from "react-icons/fa";
-import { handleGoogleSignIn } from "@/actions/(auth)/use-googleSignIn";
-import { handleGithubSignIn } from "@/actions/(auth)/use-githubSignIn";
-import { handleDiscordSignIn } from "@/actions/(auth)/use-discordSignIn";
+import {
+  handleGoogleSignIn,
+  handleGithubSignIn,
+  handleDiscordSignIn,
+} from "@/actions/(auth)/use-providerSignIn";
 
 export function LoginForm({
   className,
