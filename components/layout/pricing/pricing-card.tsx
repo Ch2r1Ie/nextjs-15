@@ -115,7 +115,7 @@ export default function PricingSectionCards() {
                   variant="default"
                   className="w-full cursor-pointer hover:text-white"
                 >
-                  Sign up
+                  Startup Plan
                 </Button>
               </CardFooter>
             </Link>
@@ -150,7 +150,7 @@ export default function PricingSectionCards() {
                   className="hover:text-accent-foreground w-full cursor-pointer"
                   variant={"outline"}
                 >
-                  Sign up
+                  Team Plan
                 </Button>
               </CardFooter>
             </Link>
@@ -185,7 +185,7 @@ export default function PricingSectionCards() {
                   className="hover:text-accent-foreground w-full cursor-pointer"
                   variant={"outline"}
                 >
-                  Sign up
+                  Enterprise Plan
                 </Button>
               </CardFooter>
             </Link>
