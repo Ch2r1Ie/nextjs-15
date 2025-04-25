@@ -17,6 +17,8 @@ import {
   handleDiscordSignIn,
 } from "@/actions/(auth)/use-providerSignIn";
 
+import Link from "next/link";
+
 export function LoginForm({
   className,
   ...props
@@ -73,13 +75,13 @@ export function LoginForm({
 
               <div className="text-muted-foreground mt-4 text-center text-sm">
                 {"By continuing, you agree to MyCompany's "}
-                <a className="text-black underline underline-offset-4">
-                  Terms of Use
-                </a>{" "}
+                <span className="cursor-pointer text-blue-800 underline underline-offset-4 hover:text-blue-500">
+                  <Link href="/">Terms of Use</Link>
+                </span>{" "}
                 and{" "}
-                <a className="text-black underline underline-offset-4">
-                  Privacy Policy.
-                </a>
+                <span className="cursor-pointer text-blue-800 underline underline-offset-4 hover:text-blue-500">
+                  <Link href="/">Privacy Policy.</Link>
+                </span>
               </div>
             </div>
           </div>
