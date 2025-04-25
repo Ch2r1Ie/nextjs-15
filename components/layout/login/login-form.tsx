@@ -25,7 +25,7 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Log in or sign</CardTitle>
+          <CardTitle className="text-2xl">Log in or Sign in</CardTitle>
           <CardDescription>
             {
               "Use your email or another service to continue with MyCompany's (it’s free)!"
@@ -38,7 +38,7 @@ export function LoginForm({
               <div className="space-y-2">
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full cursor-pointer"
                   type="button"
                   onClick={async () => {
                     await handleGoogleSignIn();
@@ -49,7 +49,7 @@ export function LoginForm({
                 </Button>
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full cursor-pointer"
                   type="button"
                   onClick={async () => {
                     await handleGithubSignIn();
@@ -60,7 +60,7 @@ export function LoginForm({
                 </Button>
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full cursor-pointer"
                   type="button"
                   onClick={async () => {
                     await handleDiscordSignIn();
