@@ -11,9 +11,7 @@ export default function Login() {
         className="-z-10 object-cover object-center"
         priority
       />
-      <div className="w-full max-w-md rounded-xl p-2 shadow-xl backdrop-blur-md">
-        <LoginForm />
-      </div>
+      <LoginForm />
     </div>
   );
 }
