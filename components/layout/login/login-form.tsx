@@ -19,29 +19,29 @@ import {
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+const popPreset = {
+  initial: {
+    scale: 0.5,
+    opacity: 0,
+    filter: "blur(5px)",
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    filter: "blur(0px)",
+    transition: { duration: 1 },
+  },
+};
+
 export function LoginForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   return (
     <motion.div
-      initial={{
-        scale: 0.5,
-        x: "-25%",
-        y: "25%",
-        opacity: 0,
-        rotate: -10,
-        filter: "blur(5px)",
-      }}
-      animate={{
-        scale: 1,
-        x: "0%",
-        y: "0%",
-        opacity: 1,
-        rotate: 0,
-        filter: "blur(0px)",
-      }}
-      transition={{ duration: 0.5 }}
+      variants={popPreset}
+      initial="initial"
+      animate="animate"
       className="w-full max-w-md rounded-xl p-2 shadow-xl backdrop-blur-md"
     >
       <div className={cn("flex flex-col gap-6", className)} {...props}>
