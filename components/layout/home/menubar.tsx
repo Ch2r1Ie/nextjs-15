@@ -17,11 +17,6 @@ import { cn } from "@/lib/utils";
 export function MenubarDemo() {
   return (
     <div className="mx-auto flex w-full max-w-2xl items-center justify-center rounded-full p-2">
-      <Link href="/">
-        <Avatar className="h-10 w-10 sm:h-12 sm:w-12">
-          <AvatarImage src="/assets/logo.png" alt="@logo" />
-        </Avatar>
-      </Link>
       <Menubar>
         <MenubarMenu>
           <MenubarTrigger
