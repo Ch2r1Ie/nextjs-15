@@ -55,7 +55,7 @@ export function UserProfileAvatar({
             <CardTitle className="text-xl">Jump back in!</CardTitle>
             <CardDescription className="text-sm">
               🎉 Welcome aboard! Your account has been created successfully.
-              Let's get started!
+              Let&apos;s get started!
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -95,7 +95,7 @@ export function UserProfileAvatar({
                   </div>
                 </div>
                 <div className="text-muted-foreground mt-3 text-center text-sm">
-                  By continuing, you agree to MyCompany's{" "}
+                  {"By continuing, you agree to MyCompany's "}
                   <span className="cursor-pointer text-blue-800 underline underline-offset-4 hover:text-blue-500">
                     <Link href="/">Terms of Use</Link>
                   </span>{" "}
