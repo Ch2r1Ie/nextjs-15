@@ -106,11 +106,11 @@ export function UserProfileAvatar({
                 <div className="text-muted-foreground mt-3 text-center text-sm">
                   {"By continuing, you agree to MyCompany's "}
                   <span className="cursor-pointer text-blue-800 underline underline-offset-4 hover:text-blue-500">
-                    <Link href="/">Terms of Use</Link>
-                  </span>{" "}
-                  and{" "}
+                    <Link href="/">Terms of Use </Link>
+                  </span>
+                  and
                   <span className="cursor-pointer text-blue-800 underline underline-offset-4 hover:text-blue-500">
-                    <Link href="/">Privacy Policy.</Link>
+                    <Link href="/"> Privacy Policy.</Link>
                   </span>
                 </div>
               </div>
