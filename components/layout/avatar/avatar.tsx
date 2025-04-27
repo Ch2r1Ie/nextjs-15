@@ -12,6 +12,7 @@ import {
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { handleSignOut } from "@/actions/(auth)/use-singOut";
 
 const popPreset = {
   initial: {
@@ -54,8 +55,10 @@ export function UserProfileAvatar({
           <CardHeader>
             <CardTitle className="text-xl">Jump back in!</CardTitle>
             <CardDescription className="text-sm">
-              🎉 Welcome aboard! Your account has been created successfully.
-              Let&apos;s get started!
+              <span>
+                🎉 Welcome aboard! Your account has been created successfully.
+                Let&apos;s get started! ready.
+              </span>
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -88,7 +91,13 @@ export function UserProfileAvatar({
                   </div>
                   <div className="mx-auto w-full max-w-xs">
                     <Link href="/login">
-                      <Button variant="ghost" className="m-1 w-full">
+                      <Button
+                        variant="ghost"
+                        className="m-1 w-full"
+                        onClick={async () => {
+                          await handleSignOut();
+                        }}
+                      >
                         Continue with another account
                       </Button>
                     </Link>
