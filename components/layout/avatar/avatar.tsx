@@ -24,7 +24,7 @@ const popPreset = {
     scale: 1,
     opacity: 1,
     filter: "blur(0px)",
-    transition: { duration: 1 },
+    transition: { duration: 0.5 },
   },
 };
 
