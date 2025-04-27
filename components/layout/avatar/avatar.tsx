@@ -65,7 +65,7 @@ export function UserProfileAvatar({
             <div className="flex w-full justify-center">
               <div className="w-11/12">
                 <div className="flex flex-col items-center gap-2">
-                  <Avatar className="h-12 w-12">
+                  <Avatar className="h-18 w-18">
                     <AvatarImage src={avatar.imageUrl} alt="@user" />
                     <AvatarFallback>{avatar.name[0]}</AvatarFallback>
                   </Avatar>
@@ -77,7 +77,7 @@ export function UserProfileAvatar({
                   </div>
                   <div className="mx-auto w-full max-w-xs">
                     <Link href="/home">
-                      <Button className="m-1 w-full bg-blue-600 hover:bg-blue-700">
+                      <Button className="m-1 w-full cursor-pointer bg-blue-600 hover:bg-blue-700">
                         Continue
                       </Button>
                     </Link>
@@ -93,7 +93,7 @@ export function UserProfileAvatar({
                     <Link href="/login">
                       <Button
                         variant="ghost"
-                        className="m-1 w-full"
+                        className="m-1 w-full cursor-pointer"
                         onClick={async () => {
                           await handleSignOut();
                         }}

@@ -5,8 +5,6 @@ import { redirect } from "next/navigation";
 const SignOut: React.FC = async () => {
   const authenticated = await isAuthenticated();
 
-  console.log("Authenticated:", authenticated);
-
   if (!authenticated) {
     redirect("/login");
   } else {
