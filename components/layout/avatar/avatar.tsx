@@ -53,7 +53,7 @@ export function UserProfileAvatar({
       <div className={cn("flex flex-col gap-4", className)} {...props}>
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl">Jump back in!</CardTitle>
+            <CardTitle className="text-2xl">Jump back in!</CardTitle>
             <CardDescription className="text-sm">
               <span>
                 🎉 Welcome aboard! Your account has been created successfully.
