@@ -50,7 +50,7 @@ export function UserProfileAvatar({
       animate="animate"
       className="w-full max-w-md rounded-xl shadow-xl backdrop-blur-md"
     >
-      <div className={cn("flex flex-col", className)} {...props}>
+      <div className={cn("flex flex-col gap-4", className)} {...props}>
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl">Jump back in!</CardTitle>
@@ -82,7 +82,7 @@ export function UserProfileAvatar({
                       </Button>
                     </Link>
                   </div>
-                  <div className="flex w-full items-center justify-between gap-4">
+                  <div className="m-1 flex w-full items-center justify-between gap-4">
                     <div className="h-px flex-grow bg-gray-300 dark:bg-gray-700" />
                     <span className="text-xs font-bold text-gray-500 dark:text-gray-400">
                       OR
@@ -93,7 +93,7 @@ export function UserProfileAvatar({
                     <Link href="/login">
                       <Button
                         variant="ghost"
-                        className="w-full cursor-pointer"
+                        className="m-1 w-full cursor-pointer"
                         onClick={async () => {
                           await handleSignOut();
                         }}
