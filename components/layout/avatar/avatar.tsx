@@ -93,7 +93,7 @@ export function UserProfileAvatar({
                     <Link href="/login">
                       <Button
                         variant="ghost"
-                        className="m-1 w-full cursor-pointer"
+                        className="w-full cursor-pointer bg-gray-100 hover:bg-gray-200"
                         onClick={async () => {
                           await handleSignOut();
                         }}
