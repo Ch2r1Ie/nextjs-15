@@ -12,7 +12,7 @@ import {
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { handleSignOut } from "@/actions/(auth)/use-singOut";
+import { handleSignOut } from "@/actions/(auth)/use-providerSignOut";
 
 const popPreset = {
   initial: {
