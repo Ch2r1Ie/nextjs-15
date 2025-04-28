@@ -49,8 +49,8 @@ export function LoginForm({
           <CardHeader>
             <CardTitle className="text-2xl">Log in or Sign in</CardTitle>
             <CardDescription>
-              "Use your email or another service to continue with
-              MyCompany&apos;s (it&apos;s free)!"
+              Use your email or another service to continue with
+              MyCompany&apos;s (it&apos;s free)!
             </CardDescription>
           </CardHeader>
           <CardContent>
