@@ -93,9 +93,7 @@ export function UserProfileAvatar({
                     <Button
                       variant="ghost"
                       className="w-full cursor-pointer bg-gray-100 hover:bg-gray-200"
-                      onClick={async () => {
-                        await handleSignOut();
-                      }}
+                      onClick={() => handleSignOut()}
                     >
                       Continue with another account
                     </Button>
