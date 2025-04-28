@@ -57,7 +57,7 @@ export function UserProfileAvatar({
             <CardDescription className="text-sm">
               <span>
                 🎉 Welcome aboard! Your account has been created successfully.
-                Let&apos;s get started! ready.
+                Let&apos;s get started!
               </span>
             </CardDescription>
           </CardHeader>
