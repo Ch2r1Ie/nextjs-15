@@ -15,8 +15,17 @@ import { cn } from "@/lib/utils";
 
 export function MenubarDemo() {
   return (
-    <div className="mx-auto flex w-full max-w-2xl items-center justify-center rounded-full p-2">
+    <div className="mx-auto flex w-full max-w-2xl items-center justify-center border-b p-2">
       <Menubar>
+        <Link href="/">
+          <MenubarMenu>
+            <MenubarTrigger
+              className={cn("cursor-pointer", "sm:text-xl", "px-1 sm:px-4")}
+            >
+              Home
+            </MenubarTrigger>
+          </MenubarMenu>
+        </Link>
         <MenubarMenu>
           <MenubarTrigger
             className={cn("cursor-pointer", "sm:text-xl", "px-1 sm:px-4")}

@@ -49,9 +49,8 @@ export function LoginForm({
           <CardHeader>
             <CardTitle className="text-2xl">Log in or Sign in</CardTitle>
             <CardDescription>
-              {
-                "Use your email or another service to continue with MyCompany's (it’s free)!"
-              }
+              "Use your email or another service to continue with
+              MyCompany&apos;s (it&apos;s free)!"
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -96,11 +95,11 @@ export function LoginForm({
                 <div className="text-muted-foreground mt-4 text-center text-sm">
                   {"By continuing, you agree to MyCompany's "}
                   <span className="cursor-pointer text-blue-800 underline underline-offset-4 hover:text-blue-500">
-                    <Link href="/">Terms of Use</Link>
-                  </span>{" "}
-                  and{" "}
+                    <Link href="/">Terms of Use </Link>
+                  </span>
+                  and
                   <span className="cursor-pointer text-blue-800 underline underline-offset-4 hover:text-blue-500">
-                    <Link href="/">Privacy Policy.</Link>
+                    <Link href="/"> Privacy Policy.</Link>
                   </span>
                 </div>
               </div>
