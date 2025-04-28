@@ -4,7 +4,7 @@ import { signIn } from "./use-auth";
 
 export const handleGoogleSignIn = async () => {
   try {
-    await signIn("google", { redirectTo: "/avatar" });
+    await signIn("google");
   } catch (error) {
     throw error;
   }
@@ -12,7 +12,7 @@ export const handleGoogleSignIn = async () => {
 
 export const handleGithubSignIn = async () => {
   try {
-    await signIn("github", { redirectTo: "/avatar" });
+    await signIn("github");
   } catch (error) {
     throw error;
   }
@@ -20,7 +20,7 @@ export const handleGithubSignIn = async () => {
 
 export const handleDiscordSignIn = async () => {
   try {
-    await signIn("discord", { redirectTo: "/avatar" });
+    await signIn("discord");
   } catch (error) {
     throw error;
   }
