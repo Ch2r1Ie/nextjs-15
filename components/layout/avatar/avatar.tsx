@@ -90,17 +90,15 @@ export function UserProfileAvatar({
                     <div className="h-px flex-grow bg-gray-300 dark:bg-gray-700" />
                   </div>
                   <div className="mx-auto w-full max-w-xs">
-                    <Link href="/login">
-                      <Button
-                        variant="ghost"
-                        className="w-full cursor-pointer bg-gray-100 hover:bg-gray-200"
-                        onClick={async () => {
-                          await handleSignOut();
-                        }}
-                      >
-                        Continue with another account
-                      </Button>
-                    </Link>
+                    <Button
+                      variant="ghost"
+                      className="w-full cursor-pointer bg-gray-100 hover:bg-gray-200"
+                      onClick={async () => {
+                        await handleSignOut();
+                      }}
+                    >
+                      Continue with another account
+                    </Button>
                   </div>
                 </div>
                 <div className="text-muted-foreground mt-3 text-center text-sm">
