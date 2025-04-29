@@ -1,17 +1,8 @@
 "use client";
 
-import {
-  Menubar,
-  MenubarCheckboxItem,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
+import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import MenuContent from "./menu-content";
 
 export function MenubarDemo() {
   return (
@@ -19,52 +10,25 @@ export function MenubarDemo() {
       <Menubar>
         <Link href="/">
           <MenubarMenu>
-            <MenubarTrigger
-              className={cn("cursor-pointer", "sm:text-xl", "px-1 sm:px-4")}
-            >
+            <MenubarTrigger className="cursor-pointer px-1 sm:px-4 sm:text-xl">
               Home
             </MenubarTrigger>
           </MenubarMenu>
         </Link>
         <MenubarMenu>
-          <MenubarTrigger
-            className={cn("cursor-pointer", "sm:text-xl", "px-1 sm:px-4")}
-          >
+          <MenubarTrigger className="cursor-pointer px-1 sm:px-4 sm:text-xl">
             Product
           </MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger
-            className={cn("cursor-pointer", "sm:text-xl", "px-1 sm:px-4")}
-          >
+          <MenubarTrigger className="cursor-pointer px-1 sm:px-4 sm:text-xl">
             Features
           </MenubarTrigger>
-          <MenubarContent className="mt-2">
-            <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
-            <MenubarCheckboxItem checked>
-              {" "}
-              Always Show Full URLs{" "}
-            </MenubarCheckboxItem>
-            <MenubarSeparator />
-            <MenubarItem inset>
-              {" "}
-              Reload <MenubarShortcut>⌘R</MenubarShortcut>{" "}
-            </MenubarItem>
-            <MenubarItem disabled inset>
-              {" "}
-              Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>{" "}
-            </MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem inset>Toggle Fullscreen</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem inset>Hide Sidebar</MenubarItem>
-          </MenubarContent>
+          <MenuContent />
         </MenubarMenu>
         <MenubarMenu>
           <Link href="/pricing">
-            <MenubarTrigger
-              className={cn("cursor-pointer", "sm:text-xl", "px-1 sm:px-4")}
-            >
+            <MenubarTrigger className="cursor-pointer px-1 sm:px-4 sm:text-xl">
               Pricing
             </MenubarTrigger>
           </Link>
