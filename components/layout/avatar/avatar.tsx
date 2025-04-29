@@ -49,11 +49,9 @@ export function UserProfileAvatar({ avatar }: UserProfileAvatarProps) {
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl">Jump back in!</CardTitle>
-            <CardDescription className="text-sm">
-              <span>
-                🎉 Welcome aboard! Your account has been created successfully.
-                Let&apos;s get started!
-              </span>
+            <CardDescription className="items-center justify-center text-sm">
+              🔥 Welcome! You&apos;re now part of the experience. Ready to
+              begin?
             </CardDescription>
           </CardHeader>
           <CardContent>
