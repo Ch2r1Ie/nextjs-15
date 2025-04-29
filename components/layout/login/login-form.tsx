@@ -18,20 +18,6 @@ import {
 import Link from "next/link";
 import { IoChevronBackOutline } from "react-icons/io5";
 
-const popPreset = {
-  initial: {
-    scale: 0.5,
-    opacity: 0,
-    filter: "blur(5px)",
-  },
-  animate: {
-    scale: 1,
-    opacity: 1,
-    filter: "blur(0px)",
-    transition: { duration: 0.5 },
-  },
-};
-
 export function LoginForm() {
   return (
     <div className="flex w-full max-w-md flex-col gap-6 rounded-xl p-2 shadow-xl backdrop-blur-md">
