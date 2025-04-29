@@ -33,10 +33,7 @@ const popPreset = {
   },
 };
 
-export function LoginForm({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<"div">) {
+export function LoginForm() {
   return (
     <motion.div
       variants={popPreset}
