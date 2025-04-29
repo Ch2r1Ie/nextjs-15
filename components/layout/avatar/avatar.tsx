@@ -1,6 +1,5 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -34,15 +33,11 @@ interface UserProfileAvatar {
   imageUrl: string;
 }
 
-interface UserProfileAvatarProps extends React.ComponentPropsWithoutRef<"div"> {
+interface UserProfileAvatarProps {
   avatar: UserProfileAvatar;
 }
 
-export function UserProfileAvatar({
-  avatar,
-  className,
-  ...props
-}: UserProfileAvatarProps) {
+export function UserProfileAvatar({ avatar }: UserProfileAvatarProps) {
   return (
     <motion.div
       variants={popPreset}
@@ -50,7 +45,7 @@ export function UserProfileAvatar({
       animate="animate"
       className="w-full max-w-md rounded-xl shadow-xl backdrop-blur-md"
     >
-      <div className={cn("flex flex-col gap-4", className)} {...props}>
+      <div className="flex flex-col gap-4">
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl">Jump back in!</CardTitle>
