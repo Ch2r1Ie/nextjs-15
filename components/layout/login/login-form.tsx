@@ -1,6 +1,5 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -18,6 +17,7 @@ import {
 } from "@/actions/(auth)/use-providerSignIn";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { IoChevronBackOutline } from "react-icons/io5";
 
 const popPreset = {
   initial: {
@@ -44,10 +44,15 @@ export function LoginForm({
       animate="animate"
       className="w-full max-w-md rounded-xl p-2 shadow-xl backdrop-blur-md"
     >
-      <div className={cn("flex flex-col gap-6", className)} {...props}>
+      <div className="flex flex-col gap-6">
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Log in or Sign in</CardTitle>
+            <CardTitle className="flex items-center gap-x-2 text-2xl">
+              <Link href="/home" className="rounded-md hover:bg-gray-100">
+                <IoChevronBackOutline />
+              </Link>
+              <span>Log in or Sign in</span>
+            </CardTitle>
             <CardDescription>
               Use your email or another service to continue with
               MyCompany&apos;s (it&apos;s free)!
