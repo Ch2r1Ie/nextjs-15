@@ -179,7 +179,7 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <Link href="/login">
+            <Link href="https://buy.stripe.com/aEU6rf3NhegqdpucMN">
               <CardFooter>
                 <Button
                   className="hover:text-accent-foreground w-full cursor-pointer"
