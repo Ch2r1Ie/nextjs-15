@@ -13,26 +13,26 @@ export function MenubarDemo() {
       <div className="hidden space-x-4 md:flex">
         <Button
           variant="ghost"
-          className="rounded-2xl px-4 py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-blue-800"
+          className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-black"
         >
           Product
         </Button>
         <Button
           variant="ghost"
-          className="rounded-2xl px-4 py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-blue-800"
+          className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-black"
         >
           Features
         </Button>
         <Link href="/pricing">
           <Button
             variant="ghost"
-            className="rounded-2xl px-4 py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-blue-800"
+            className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-black"
           >
             Pricing
           </Button>
-          <span className="mx-5 self-center text-xl text-black">|</span>
+          <span className="mx-5 self-center text-xl text-white">|</span>
           <Link href="/login">
-            <Button className="rounded-2xl bg-amber-300 px-4 py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-blue-800">
+            <Button className="rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-black">
               Start For Free
             </Button>
           </Link>
@@ -47,23 +47,23 @@ export function MenubarDemo() {
         <div className="absolute left-1/2 z-50 mt-4 w-full max-w-xs -translate-x-1/2 rounded-3xl bg-white/70 p-6 shadow-lg ring-1 ring-black/10 backdrop-blur-lg md:hidden">
           <div
             onClick={() => setIsOpen(false)}
-            className="mb-2 cursor-pointer rounded-xl px-6 py-2 text-center text-xl font-semibold text-blue-800 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-blue-100"
+            className="mb-2 cursor-pointer rounded-xl px-6 py-2 text-center text-xl font-semibold text-black transition-all duration-300 ease-in-out hover:scale-105 hover:bg-blue-100"
           >
             Product
           </div>
           <div
             onClick={() => setIsOpen(false)}
-            className="mb-2 cursor-pointer rounded-xl px-6 py-2 text-center text-xl font-semibold text-blue-800 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-blue-100"
+            className="mb-2 cursor-pointer rounded-xl px-6 py-2 text-center text-xl font-semibold text-black transition-all duration-300 ease-in-out hover:scale-105 hover:bg-blue-100"
           >
             Features
           </div>
           <Link href="/pricing" onClick={() => setIsOpen(false)}>
-            <div className="mb-2 cursor-pointer rounded-xl px-6 py-2 text-center text-xl font-semibold text-blue-800 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-blue-100">
+            <div className="mb-2 cursor-pointer rounded-xl px-6 py-2 text-center text-xl font-semibold text-black transition-all duration-300 ease-in-out hover:scale-105 hover:bg-blue-100">
               Pricing
             </div>
           </Link>
           <Link href="/login" onClick={() => setIsOpen(false)}>
-            <div className="cursor-pointer rounded-xl px-6 py-2 text-center text-xl font-semibold text-blue-800 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-blue-100">
+            <div className="cursor-pointer rounded-xl px-6 py-2 text-center text-xl font-semibold text-black transition-all duration-300 ease-in-out hover:scale-105 hover:bg-blue-100">
               Start For Free
             </div>
           </Link>
