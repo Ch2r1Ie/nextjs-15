@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 import Github from "next-auth/providers/github";
 import Discord from "next-auth/providers/discord";
+import { createUser } from "../(api)/create-user";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   trustHost: true,
@@ -9,6 +10,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   session: {
     strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60,
+  },
+  pages: {
+    error: "/login",
   },
   providers: [
     Google({
@@ -39,4 +43,39 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
+  callbacks: {
+    jwt({ token, user, account, trigger, session }) {
+  
+      if (
+        trigger === "signIn" &&
+        user &&
+        account?.access_token &&
+        account.provider
+      ) {
+        try {
+          createUser(account.access_token, account.provider);
+        } catch (error) {
+          throw error;
+        }
+
+        token.id = user.id;
+      }
+
+      if (trigger === "update" && session?.name !== token.name) {
+        token.name = session.name;
+      }
+
+      return token;
+    },
+
+    async session({ session, token }) {
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          id: token.id as string,
+        },
+      };
+    },
+  },
 });
