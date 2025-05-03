@@ -24,7 +24,7 @@ export function LoginForm() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-x-2 text-2xl">
-            <Link href="/home" className="rounded-md hover:bg-gray-100">
+            <Link href="/" className="rounded-md hover:bg-gray-100">
               <IoChevronBackOutline />
             </Link>
             <span>Log in or Sign in</span>

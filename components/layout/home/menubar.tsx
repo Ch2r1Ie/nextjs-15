@@ -10,7 +10,6 @@ export function MenubarDemo() {
 
   return (
     <div>
-      {/* Desktop Menu */}
       <div className="hidden space-x-4 md:flex">
         <Button
           variant="ghost"
@@ -34,20 +33,16 @@ export function MenubarDemo() {
         </Link>
         <span className="mx-5 self-center text-xl text-white">|</span>
         <Link href="/login" passHref>
-          <Button className="rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white">
+          <Button className="rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer">
             Start For Free
           </Button>
         </Link>
       </div>
-
-      {/* Mobile Toggle */}
       <div className="md:hidden">
         <Button variant="ghost" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className="size-md" /> : <Menu className="size-md" />}
         </Button>
       </div>
-
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute left-1/2 z-50 mt-4 w-full max-w-xs -translate-x-1/2 rounded-3xl bg-white/70 p-6 shadow-lg ring-1 ring-black/10 backdrop-blur-lg md:hidden">
           <div

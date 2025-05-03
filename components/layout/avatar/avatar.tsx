@@ -69,7 +69,7 @@ export function UserProfileAvatar({ avatar }: UserProfileAvatarProps) {
                     </div>
                   </div>
                   <div className="mx-auto w-full max-w-xs">
-                    <Link href="/home">
+                    <Link href="/">
                       <Button className="m-1 w-full cursor-pointer bg-blue-600 hover:bg-blue-700">
                         Continue
                       </Button>
