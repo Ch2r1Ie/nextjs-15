@@ -14,27 +14,27 @@ export function MenubarDemo() {
         <Link href="/">
           <Button
             variant="ghost"
-            className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:bg-white hover:text-blue-800"
+            className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-blue-800"
           >
             Home
           </Button>
         </Link>
         <Button
           variant="ghost"
-          className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:bg-white hover:text-blue-800"
+          className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-blue-800"
         >
           Product
         </Button>
         <Button
           variant="ghost"
-          className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:bg-white hover:text-blue-800"
+          className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-blue-800"
         >
           Features
         </Button>
         <Link href="/pricing">
           <Button
             variant="ghost"
-            className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:bg-white hover:text-blue-800"
+            className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-blue-800"
           >
             Pricing
           </Button>
