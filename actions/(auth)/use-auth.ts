@@ -13,6 +13,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   pages: {
     error: "/login",
+    signOut: "/login",
   },
   providers: [
     Google({
