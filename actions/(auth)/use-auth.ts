@@ -12,8 +12,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     maxAge: 30 * 24 * 60 * 60,
   },
   pages: {
-    error: "/login",
+    signIn: "/login",
     signOut: "/login",
+    error: "/login",
   },
   providers: [
     Google({
@@ -46,7 +47,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   ],
   callbacks: {
     jwt({ token, user, account, trigger, session }) {
-  
       if (
         trigger === "signIn" &&
         user &&
