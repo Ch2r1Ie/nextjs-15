@@ -32,7 +32,7 @@ const features = [
 
 export default function FeatureSectionSimple() {
   return (
-    <section className="mt-50 flex items-center justify-center p-6">
+    <section className="mt-50 flex items-center justify-center sm:p-2 md:p-6 lg:p-10">
       <div className="w-full max-w-6xl space-y-8 text-center">
         <div className="space-y-4">
           <h2 className="text-3xl font-bold">
@@ -44,7 +44,7 @@ export default function FeatureSectionSimple() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <Card key={feature.title}>
               <CardContent className="space-y-2 p-6">

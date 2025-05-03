@@ -4,18 +4,18 @@ export default function CardGroup() {
   return (
     <>
       <div className="container py-6">
-        <div className="max-w-5xl px-4 xl:px-0 py-10 mx-auto">
+        <div className="mx-auto max-w-5xl px-4 py-10 xl:px-0">
           <div className="container flex flex-col items-center text-center">
-            <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="mt-3 mb-6 text-4xl font-bold tracking-tight sm:text-5xl">
               Activity
             </h2>
           </div>
-          <div className="border rounded-xl">
-            <div className="p-4 lg:p-8 rounded-xl">
-              <div className="grid grid-cols-1 sm:grid-cols-3 items-center gap-y-20 gap-x-12">
-                <div className="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-border before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
+          <div className="rounded-xl border">
+            <div className="sm:m-2 sm:p-2 md:m-6">
+              <div className="grid grid-cols-1 items-center gap-x-12 gap-y-20 sm:grid-cols-3">
+                <div className="before:bg-border relative text-center before:absolute before:start-1/2 before:-top-full before:mt-3.5 before:h-20 before:w-px before:-translate-x-1/2 before:rotate-[60deg] before:transform first:before:hidden sm:before:-start-6 sm:before:top-1/2 sm:before:mt-0 sm:before:-translate-x-0 sm:before:-translate-y-1/2 sm:before:rotate-12">
                   <svg
-                    className="shrink-0 size-6 sm:size-8  mx-auto"
+                    className="mx-auto size-6 shrink-0 sm:size-8"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -33,36 +33,36 @@ export default function CardGroup() {
                     <path d="M3 4h8" />
                   </svg>
                   <div className="mt-3 sm:mt-5">
-                    <h3 className="text-lg sm:text-3xl font-semibold">
+                    <h3 className="text-lg font-semibold sm:text-3xl">
                       2,000+
                     </h3>
-                    <p className="mt-1 text-sm sm:text-base text-muted-foreground">
+                    <p className="text-muted-foreground mt-1 text-sm sm:text-base">
                       Acme partners
                     </p>
                   </div>
                 </div>
-                <div className="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-border before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
-                  <div className="flex justify-center items-center -space-x-5">
-                    <Avatar className="relative z-[2] shrink-0 size-8 border-primary border">
+                <div className="before:bg-border relative text-center before:absolute before:start-1/2 before:-top-full before:mt-3.5 before:h-20 before:w-px before:-translate-x-1/2 before:rotate-[60deg] before:transform first:before:hidden sm:before:-start-6 sm:before:top-1/2 sm:before:mt-0 sm:before:-translate-x-0 sm:before:-translate-y-1/2 sm:before:rotate-12">
+                  <div className="flex items-center justify-center -space-x-5">
+                    <Avatar className="border-primary relative z-[2] size-8 shrink-0 border">
                       <AvatarImage src="https://images.unsplash.com/photo-1601935111741-ae98b2b230b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"></AvatarImage>
                     </Avatar>
-                    <Avatar className="relative z-[1] shrink-0 size-8 border-primary border -mt-7">
+                    <Avatar className="border-primary relative z-[1] -mt-7 size-8 shrink-0 border">
                       <AvatarImage src="https://images.unsplash.com/photo-1570654639102-bdd95efeca7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"></AvatarImage>
                     </Avatar>{" "}
-                    <Avatar className="relative shrink-0 size-8 border-primary border">
+                    <Avatar className="border-primary relative size-8 shrink-0 border">
                       <AvatarImage src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80"></AvatarImage>
                     </Avatar>
                   </div>
                   <div className="mt-3 sm:mt-5">
-                    <h3 className="text-lg sm:text-3xl font-semibold">85%</h3>
-                    <p className="mt-1 text-sm sm:text-base text-muted-foreground">
+                    <h3 className="text-lg font-semibold sm:text-3xl">85%</h3>
+                    <p className="text-muted-foreground mt-1 text-sm sm:text-base">
                       Happy customers
                     </p>
                   </div>
                 </div>
-                <div className="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-border before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
+                <div className="before:bg-border relative text-center before:absolute before:start-1/2 before:-top-full before:mt-3.5 before:h-20 before:w-px before:-translate-x-1/2 before:rotate-[60deg] before:transform first:before:hidden sm:before:-start-6 sm:before:top-1/2 sm:before:mt-0 sm:before:-translate-x-0 sm:before:-translate-y-1/2 sm:before:rotate-12">
                   <svg
-                    className="shrink-0 size-6 sm:size-8 mx-auto"
+                    className="mx-auto size-6 shrink-0 sm:size-8"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -80,8 +80,8 @@ export default function CardGroup() {
                     <circle cx="6" cy="5" r="3" />
                   </svg>
                   <div className="mt-3 sm:mt-5">
-                    <h3 className="text-lg sm:text-3xl font-semibold">$55M+</h3>
-                    <p className="mt-1 text-sm sm:text-base text-muted-foreground">
+                    <h3 className="text-lg font-semibold sm:text-3xl">$55M+</h3>
+                    <p className="text-muted-foreground mt-1 text-sm sm:text-base">
                       Ads managed yearly
                     </p>
                   </div>
