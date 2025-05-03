@@ -9,13 +9,13 @@ import { MenubarDemo } from "@/components/layout/home/menubar";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden scroll-smooth px-6 py-6">
-      <div className="mx-auto mt-5 flex w-11/12 items-center justify-between rounded-full border bg-gradient-to-r from-blue-600 via-purple-700 to-black px-5 py-2 shadow-lg transition-shadow duration-100 hover:shadow-xl sm:mx-2">
+      <div className="mx-auto mt-2 flex w-11/12 items-center justify-between rounded-2xl border bg-gradient-to-r from-blue-600 via-purple-700 to-black px-5 py-2 shadow-lg transition-shadow duration-100 hover:shadow-xl sm:mx-2">
         <span className="flex-grow px-2 text-4xl font-bold text-white hover:cursor-pointer">
           .AI
         </span>
         <MenubarDemo />
       </div>
-      <div>
+      <div className="mx-auto w-11/12 items-center justify-center">
         <HeroSectionSimpleCentred />
         <FeatureSectionSimple />
         <CardGroup />
