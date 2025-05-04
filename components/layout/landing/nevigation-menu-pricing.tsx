@@ -31,7 +31,7 @@ export default function PricingMenu() {
       <Button
         ref={buttonRef}
         variant="ghost"
-        className="flex items-center justify-center rounded-2xl py-6 text-xl text-black transition-all duration-300 hover:bg-gray-200"
+        className="flex items-center justify-center rounded-2xl py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-gray-200"
         onClick={() => setIsOpen((prev) => !prev)}
         aria-haspopup="true"
         aria-expanded={isOpen ? "true" : "false"}

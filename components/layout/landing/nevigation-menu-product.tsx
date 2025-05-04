@@ -49,7 +49,7 @@ export default function ProductMenu() {
       {isOpen && (
         <div
           ref={dropdownRef}
-          className="absolute top-full left-0 z-10 mt-3 w-56 flex-col gap-2 rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out"
+          className="absolute top-full left-0 z-10 mt-3 w-56 flex-col gap-2 rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out hover:cursor-pointer"
           role="menu"
           aria-labelledby="product-button"
         >
