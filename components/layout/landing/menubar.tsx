@@ -4,34 +4,20 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import ProductMenu from "./nevigation-menu-product";
+import FeatureMenu from "./nevigation-menu-feature";
+import PricingMenu from "./nevigation-menu-pricing";
 
 export function MenubarDemo() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
-      <div className="hidden space-x-4 md:flex">
-        <Button
-          variant="ghost"
-          className="rounded-2xl px-4 py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-gray-200"
-        >
-          Product
-        </Button>
-        <Button
-          variant="ghost"
-          className="rounded-2xl px-4 py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-gray-200"
-        >
-          Features
-        </Button>
-        <Link href="/pricing" passHref>
-          <Button
-            variant="ghost"
-            className="rounded-2xl px-4 py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-gray-200"
-          >
-            Pricing
-          </Button>
-        </Link>
-        <span className="mx-5 self-center text-xl text-black">|</span>
+      <div className="hidden md:flex">
+        <ProductMenu />
+        <FeatureMenu />
+        <PricingMenu />
+        <span className="self-center text-xl text-black md:mx-5">|</span>
         <Link href="/login" passHref>
           <Button className="rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 px-4 py-6 text-xl transition-all duration-300 hover:cursor-pointer">
             Start For Free
