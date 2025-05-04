@@ -13,27 +13,27 @@ export function MenubarDemo() {
       <div className="hidden space-x-4 md:flex">
         <Button
           variant="ghost"
-          className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-black"
+          className="rounded-2xl px-4 py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-gray-200"
         >
           Product
         </Button>
         <Button
           variant="ghost"
-          className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-black"
+          className="rounded-2xl px-4 py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-gray-200"
         >
           Features
         </Button>
         <Link href="/pricing" passHref>
           <Button
             variant="ghost"
-            className="rounded-2xl px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-black"
+            className="rounded-2xl px-4 py-6 text-xl text-black transition-all duration-300 hover:cursor-pointer hover:bg-gray-200"
           >
             Pricing
           </Button>
         </Link>
-        <span className="mx-5 self-center text-xl text-white">|</span>
+        <span className="mx-5 self-center text-xl text-black">|</span>
         <Link href="/login" passHref>
-          <Button className="rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 px-4 py-6 text-xl text-white transition-all duration-300 hover:cursor-pointer">
+          <Button className="rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 px-4 py-6 text-xl transition-all duration-300 hover:cursor-pointer">
             Start For Free
           </Button>
         </Link>
