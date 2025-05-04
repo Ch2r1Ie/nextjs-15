@@ -17,7 +17,7 @@ export function MenubarDemo() {
         <ProductMenu />
         <FeatureMenu />
         <PricingMenu />
-        <span className="self-center text-xl text-black md:mx-5">|</span>
+        <span className="self-center text-xl md:mx-5">|</span>
         <Link href="/login" passHref>
           <Button className="rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 px-4 py-6 text-xl transition-all duration-300 hover:cursor-pointer">
             Start For Free
