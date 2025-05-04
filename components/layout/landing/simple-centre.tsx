@@ -9,7 +9,7 @@ export default function HeroSectionSimpleCentred() {
         <div className="container mt-15 lg:py-32">
           <div className="mx-auto mt-5 max-w-2xl text-center">
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-              Let&apos;s Build Together
+              Let&apos;s Build Your World
             </h1>
           </div>
           <div className="mx-auto mt-5 max-w-3xl text-center">
