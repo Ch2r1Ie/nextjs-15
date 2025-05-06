@@ -1,5 +1,4 @@
 import React from "react";
-import HeroSectionSimpleCentred from "@/components/layout/landing/simple-centre";
 import Team05Page from "@/components/layout/landing/team-section";
 import FeatureSectionSimple from "@/components/layout/landing/feature-section";
 import CardGroup from "@/components/layout/landing/stats";
