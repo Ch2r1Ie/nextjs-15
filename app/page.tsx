@@ -15,8 +15,7 @@ export default function Home() {
         </span>
         <MenubarDemo />
       </div>
-      <div className="mx-auto mt-30 w-11/12 items-center justify-center sm:mt-30 md:mt-30">
-        <HeroSectionSimpleCentred />
+      <div className="mx-auto mt-230 w-11/12 items-center justify-center sm:mt-230 md:mt-230">
         <FeatureSectionSimple />
         <CardGroup />
         <Logos3 />
