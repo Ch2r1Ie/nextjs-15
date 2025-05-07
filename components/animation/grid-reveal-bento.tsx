@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
 import { SiGithub, SiTiktok, SiGitter, SiYoutube } from "react-icons/si";
 import { HTMLMotionProps, motion } from "framer-motion";
+import Image from "next/image";
 
 interface BlockProps extends HTMLMotionProps<"div"> {
   className?: string;
@@ -64,7 +65,7 @@ const Block: React.FC<BlockProps> = ({ className, ...rest }) => {
 
 const HeaderBlock: React.FC = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
-    <img
+    <Image
       src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
       alt="avatar"
       className="mb-4 size-14 rounded-full"
