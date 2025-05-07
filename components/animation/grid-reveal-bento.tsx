@@ -71,7 +71,7 @@ const HeaderBlock: React.FC = () => (
       className="mb-4 size-14 rounded-full"
     />
     <h1 className="mb-12 text-4xl leading-tight font-medium">
-      Hi, I'm Tom.{" "}
+      Hi, I&apos;m Tom.{" "}
       <span className="text-zinc-400">
         I build cool websites like this one.
       </span>
@@ -152,8 +152,8 @@ const AboutBlock: React.FC = () => (
       My passion is building cool stuff.{" "}
       <span className="text-zinc-400">
         I build primarily with React, Tailwind CSS, and Framer Motion. I love
-        this stack so much that I even built a website about it. I've made over
-        a hundred videos on the subject across YouTube and TikTok.
+        this stack so much that I even built a website about it. I&apos;ve made
+        over a hundred videos on the subject across YouTube and TikTok.
       </span>
     </p>
   </Block>
