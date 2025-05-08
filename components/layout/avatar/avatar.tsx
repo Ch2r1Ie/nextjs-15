@@ -43,7 +43,7 @@ export function UserProfileAvatar({ avatar }: UserProfileAvatarProps) {
       variants={popPreset}
       initial="initial"
       animate="animate"
-      className="w-full max-w-md rounded-xl shadow-xl backdrop-blur-md"
+      className="w-full max-w-md rounded-xl font-mono shadow-xl backdrop-blur-md"
     >
       <div className="flex flex-col gap-4">
         <Card>
@@ -85,7 +85,7 @@ export function UserProfileAvatar({ avatar }: UserProfileAvatarProps) {
                   <div className="mx-auto w-full max-w-xs">
                     <Button
                       variant="ghost"
-                      className="w-full cursor-pointer bg-gray-100 hover:bg-gray-200"
+                      className="md:text-md w-full cursor-pointer bg-gray-100 text-xs hover:bg-gray-200"
                       onClick={() => handleSignOut()}
                     >
                       Continue with another account
