@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const RevealLinks: React.FC = () => {
   return (
-    <section className="grid place-content-center gap-4 px-4 text-white">
+    <section className="grid place-content-center gap-4 text-white">
       <FlipLink href="#">Pricing</FlipLink>
     </section>
   );
