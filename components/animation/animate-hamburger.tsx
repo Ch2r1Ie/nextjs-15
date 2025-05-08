@@ -9,14 +9,11 @@ export const AnimateHamBurger: React.FC = () => {
 
   return (
     <div>
-      <div className="relative inset-x-0 z-40 min-w-screen border-b-4 border-black bg-gradient-to-r from-red-300 via-red-400 to-red-500">
+      <div className="relative inset-x-0 z-40 min-w-screen border-b-4 border-black bg-gradient-to-r from-purple-400 via-blue-400 to-red-500">
         <div className="ml-4 flex items-center justify-between">
+          <div className="flex items-center"></div>
           <div className="flex items-center">
-            <BrainCircuit className="h-10 w-10" />
-            <span className="text-5xl font-extrabold">Pr</span>
-          </div>
-          <div className="flex items-center">
-            <button className="translate-x-[-4px] translate-y-[-4px] border-2 border-black bg-white px-2 py-2 font-semibold text-black uppercase shadow-[4px_4px_0px_black] transition-all duration-300">
+            <button className="mt-1 mr-2 translate-x-[-4px] translate-y-[-4px] border-2 border-black bg-white px-2 py-2 font-semibold text-black uppercase shadow-[4px_4px_0px_black] transition-all duration-300">
               <div className="flex">
                 <span>SignIn</span>
                 <LogIn className="px-1" />
@@ -29,31 +26,28 @@ export const AnimateHamBurger: React.FC = () => {
           </div>
         </div>
       </div>
-      <motion.div
-        initial={{ x: "-100%" }}
-        animate={isToggle ? { x: 0 } : { x: "-100%" }}
-        transition={{ duration: 0.25, ease: "easeInOut" }}
-        className="absolute inset-x-0 top-19 left-1/2 z-40 flex min-w-screen -translate-x-1/2 flex-col border-b-4 border-black bg-white text-4xl font-semibold"
-      >
-        <ul>
-          <ul className="ml-12 flex w-full max-w-xs items-center justify-between">
-            <li>Home</li>
-            <ArrowRightFromLine className="h-10 w-10" />
+      {isToggle && (
+        <div className="absolute inset-x-0 top-19 left-1/2 z-40 flex min-w-screen -translate-x-1/2 flex-col border-b-4 border-black bg-white text-4xl font-semibold">
+          <ul>
+            <ul className="ml-12 flex w-full max-w-xs items-center justify-between">
+              <li>Home</li>
+              <ArrowRightFromLine className="h-10 w-10" />
+            </ul>
+            <ul className="ml-12 flex w-full max-w-xs items-center justify-between">
+              <li>Pricing</li>
+              <ArrowRightFromLine className="h-10 w-10" />
+            </ul>
+            <ul className="ml-12 flex w-full max-w-xs items-center justify-between">
+              <li>Features</li>
+              <ArrowRightFromLine className="h-10 w-10" />
+            </ul>
+            <ul className="ml-12 flex w-full max-w-xs items-center justify-between">
+              <li>Docs</li>
+              <ArrowRightFromLine className="h-10 w-10" />
+            </ul>
           </ul>
-          <ul className="ml-12 flex w-full max-w-xs items-center justify-between">
-            <li>Pricing</li>
-            <ArrowRightFromLine className="h-10 w-10" />
-          </ul>
-          <ul className="ml-12 flex w-full max-w-xs items-center justify-between">
-            <li>Features</li>
-            <ArrowRightFromLine className="h-10 w-10" />
-          </ul>
-          <ul className="ml-12 flex w-full max-w-xs items-center justify-between">
-            <li>Docs</li>
-            <ArrowRightFromLine className="h-10 w-10" />
-          </ul>
-        </ul>
-      </motion.div>
+        </div>
+      )}
     </div>
   );
 };
@@ -78,7 +72,7 @@ const AnimatedHamburgerButton: React.FC<ButtonProps> = ({
         initial={false}
         animate={isToggle ? "open" : "closed"}
         onClick={() => setIsToggle((prev) => !prev)}
-        className="relative h-18 w-18 rounded-full bg-white/0 transition-colors hover:bg-white/20"
+        className="relative h-18 w-18 border-l-2 border-black bg-orange-400 transition-colors hover:bg-white/20"
       >
         <motion.span
           variants={VARIANTS.top}
