@@ -20,10 +20,10 @@ import { IoChevronBackOutline } from "react-icons/io5";
 
 export function LoginForm() {
   return (
-    <div className="flex w-full max-w-md flex-col gap-6 rounded-xl p-2 shadow-xl backdrop-blur-md">
+    <div className="flex w-full max-w-md flex-col gap-6 rounded-xl p-2 font-mono shadow-xl backdrop-blur-md">
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-x-2 text-2xl">
+          <CardTitle className="flex items-center gap-x-2 text-xl">
             <Link href="/" className="rounded-md hover:bg-gray-100">
               <IoChevronBackOutline />
             </Link>
