@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { MotionConfig, motion, Variants } from "framer-motion";
-import { BrainCircuit, LogIn, ArrowRightFromLine } from "lucide-react";
+import { LogIn, ArrowRightFromLine } from "lucide-react";
 
 export const AnimateHamBurger: React.FC = () => {
   const [isToggle, setIsToggle] = useState(false);
