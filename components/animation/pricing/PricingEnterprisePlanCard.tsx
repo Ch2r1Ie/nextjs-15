@@ -2,12 +2,9 @@
 
 import { motion } from "framer-motion";
 import React from "react";
+import Link from "next/link";
 
-const PricingEnterprisePlanCard: React.FC = () => {
-  return <Card />;
-};
-
-const Card: React.FC = () => {
+const PricingEnterprisePlanCard: React.FC<Link> = ({ href }) => {
   return (
     <motion.div
       whileHover="hover"
@@ -39,9 +36,11 @@ const Card: React.FC = () => {
           Month
         </motion.span>
       </div>
-      <button className="absolute right-4 bottom-4 left-4 z-20 rounded border-2 border-white bg-white/10 py-2 text-center font-mono font-bold text-white uppercase backdrop-blur transition-colors hover:bg-white/20 hover:text-white">
-        Subscribe Now
-      </button>
+      <Link href={href}>
+        <button className="absolute right-4 bottom-4 left-4 z-20 rounded border-2 border-white bg-white py-2 text-center font-mono font-black text-neutral-800 uppercase backdrop-blur transition-colors hover:cursor-pointer hover:bg-white/30 hover:text-white">
+          Get it now
+        </button>
+      </Link>
       <Background />
     </motion.div>
   );

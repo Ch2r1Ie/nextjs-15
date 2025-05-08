@@ -13,10 +13,10 @@ export default function PricingSectionCards() {
         <RevealLinks />
         <div className="mx-auto mt-10 flex w-full justify-center">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <PricingFreePlanCard />
-            <PricingPlusPlanCard />
-            <PricingProPlanCard />
-            <PricingEnterprisePlanCard />
+            <PricingFreePlanCard href="#" />
+            <PricingPlusPlanCard href="#" />
+            <PricingProPlanCard href="#" />
+            <PricingEnterprisePlanCard href="#" />
           </div>
         </div>
       </div>
