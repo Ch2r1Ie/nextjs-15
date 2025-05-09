@@ -22,7 +22,7 @@ const PricingSectionCards: React.FC<PricingSectionCardsProps> = ({
   const [toggled, setToggled] = useState(false);
 
   return (
-    <div className="flex min-h-screen justify-center bg-black">
+    <div className="flex min-h-screen justify-center">
       <div className="mt-10 xl:mt-20">
         <div className="flex items-center">
           <RevealLinks />
