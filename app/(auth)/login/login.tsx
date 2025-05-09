@@ -11,7 +11,7 @@ export default function Login() {
         className="-z-10 object-cover object-center"
         priority
       />
-      <LoginForm />
+      <LoginForm isReturnLink={true} />
     </div>
   );
 }

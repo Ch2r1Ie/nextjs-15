@@ -8,7 +8,17 @@ import PricingProPlanCard from "@/components/animation/pricing/PricingProPlanCar
 import PricingEnterprisePlanCard from "@/components/animation/pricing/PricingEnterprisePlanCard";
 import TogglePlanButton from "@/components/animation/pricing/MonthlyAnnual-button";
 
-export default function PricingSectionCards() {
+interface PricingSectionCardsProps {
+  authentication: boolean;
+}
+const navigate = (authenticated: boolean) =>
+  authenticated
+    ? "https://buy.stripe.com/aEU6rf3NhegqdpucMN"
+    : "/landing?isToggleLogIn=true";
+
+const PricingSectionCards: React.FC<PricingSectionCardsProps> = ({
+  authentication,
+}) => {
   const [toggled, setToggled] = useState(false);
 
   return (
@@ -22,19 +32,19 @@ export default function PricingSectionCards() {
         <div className="mx-auto mt-5 flex w-full justify-center">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <PricingFreePlanCard
-              href="https://buy.stripe.com/aEU6rf3NhegqdpucMN"
+              href={navigate(authentication)}
               isToggle={toggled}
             />
             <PricingPlusPlanCard
-              href="https://buy.stripe.com/aEU6rf3NhegqdpucMN"
+              href={navigate(authentication)}
               isToggle={toggled}
             />
             <PricingProPlanCard
-              href="https://buy.stripe.com/aEU6rf3NhegqdpucMN"
+              href={navigate(authentication)}
               isToggle={toggled}
             />
             <PricingEnterprisePlanCard
-              href="https://buy.stripe.com/aEU6rf3NhegqdpucMN"
+              href={navigate(authentication)}
               isToggle={toggled}
             />
           </div>
@@ -42,4 +52,6 @@ export default function PricingSectionCards() {
       </div>
     </div>
   );
-}
+};
+
+export default PricingSectionCards;
