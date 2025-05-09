@@ -60,7 +60,7 @@ const PricingPlusPlanCard: React.FC<PricingButton> = ({ href, isToggle }) => {
         </motion.span>
       </div>
       <Link href={href}>
-        <button className="absolute right-4 bottom-4 left-4 z-20 rounded border-2 border-white bg-white py-2 text-center font-mono font-black text-neutral-800 uppercase backdrop-blur transition-colors hover:bg-white/30 hover:text-white">
+        <button className="absolute right-4 bottom-4 left-4 z-20 rounded border-2 border-white bg-white py-2 text-center font-mono font-black text-neutral-800 uppercase backdrop-blur transition-colors hover:cursor-pointer hover:bg-white/30 hover:text-white">
           Get it now
         </button>
       </Link>

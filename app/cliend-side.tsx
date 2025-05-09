@@ -1,9 +1,9 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import NavBarTabs from "@/components/animation/landing/Animate-Navbar";
+import NavBarTabs from "@/components/animation/home/Animate-Navbar";
 
-export default function LandingPageClient() {
+export default function HomeClientSide() {
   const searchParams = useSearchParams();
   const isToggleLogIn = searchParams.get("isToggleLogIn");
   const toggleLogIn = isToggleLogIn === "true";

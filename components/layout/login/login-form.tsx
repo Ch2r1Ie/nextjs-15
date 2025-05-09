@@ -80,7 +80,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ isReturnLink }) => {
               </div>
 
               <div className="text-muted-foreground mt-4 text-center text-sm">
-                {"By continuing, you agree to MyCompany's "}
+                By continuing, you agree to MyCompany&apos;s
                 <span className="cursor-pointer text-blue-800 underline underline-offset-4 hover:text-blue-500">
                   <Link href="/">Terms of Use </Link>
                 </span>

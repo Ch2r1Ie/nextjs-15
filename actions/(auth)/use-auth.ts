@@ -12,9 +12,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     maxAge: 30 * 24 * 60 * 60,
   },
   pages: {
-    signIn: "/login",
-    signOut: "/login",
-    error: "/login",
+    signIn: "/?isToggleLogin=true",
+    signOut: "/",
+    error: "/",
   },
   providers: [
     Google({

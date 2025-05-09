@@ -1,6 +1,6 @@
 import { auth } from "@/actions/(auth)/use-auth";
 import { UserProfileAvatar } from "@/components/layout/avatar/avatar";
-import Image from "next/image";
+import LoadingSpinner from "@/components/loading/loader-spinner";
 
 export default async function UserAvatar() {
   const session = await auth();
@@ -8,17 +8,10 @@ export default async function UserAvatar() {
   const email = session?.user?.email || "user@example.com";
   const imageUrl = session?.user?.image || "/assets/default-avatar.png";
 
-  if (!session) return <div>Loading...</div>;
+  if (!session) return <LoadingSpinner />;
 
   return (
     <div className="relative flex min-h-svh w-full items-center justify-center p-6 md:p-10">
-      <Image
-        src="/assets/auth-background.jpeg"
-        alt="Background"
-        fill
-        className="-z-10 object-cover object-center"
-        priority
-      />
       <UserProfileAvatar avatar={{ email, name, imageUrl }} />
     </div>
   );

@@ -1,5 +1,5 @@
 import { isAuthenticated } from "@/actions/(auth)/check-authenticate";
-import UserAvatar from "./logout";
+import UserAvatar from "./avatar";
 import { redirect } from "next/navigation";
 
 const SignOut: React.FC = async () => {
