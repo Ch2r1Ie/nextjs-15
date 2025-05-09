@@ -26,7 +26,7 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({ isToggleLogIn }) => {
 
   return (
     <div>
-      <div className="item-center mt-30 flex justify-center md:mt-50">
+      <div className="item-center mt-40 flex justify-center">
         <AnimatePresence initial={false}>
           {isVisible && (
             <motion.div
