@@ -1,10 +1,26 @@
 "use client";
 
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
-const PricingProPlanCard: React.FC<Link> = ({ href }) => {
+const PricingProPlanCard: React.FC<PricingButton> = ({ href, isToggle }) => {
+  const monthlyPrice = 299;
+  const yearlyPrice = 299 * 12;
+
+  const base = useMotionValue(monthlyPrice);
+
+  const animatedValue = useSpring(base, {
+    stiffness: 100,
+    damping: 20,
+  });
+
+  const rounded = useTransform(animatedValue, (val) => `$${Math.round(val)}`);
+
+  useEffect(() => {
+    base.set(isToggle ? yearlyPrice : monthlyPrice);
+  }, [isToggle, base]);
+
   return (
     <motion.div
       whileHover="hover"
@@ -38,7 +54,7 @@ const PricingProPlanCard: React.FC<Link> = ({ href }) => {
           }}
           className="my-2 block origin-top-left font-mono text-6xl leading-[1.2] font-black"
         >
-          $299
+          <motion.span>{rounded}</motion.span>
           <br />
           Month
         </motion.span>
@@ -73,7 +89,6 @@ const Background: React.FC = () => {
         ease: "backInOut",
       }}
     >
-      {/* Mechanical, segmented path */}
       <motion.path
         d="M160 90 L180 150 L160 190 L140 150 Z"
         fill="url(#gradient1)"
@@ -87,8 +102,6 @@ const Background: React.FC = () => {
           ease: "easeInOut",
         }}
       />
-
-      {/* Neon pulsing circle with square-like transition */}
       <motion.circle
         cx="160"
         cy="192"
@@ -109,8 +122,6 @@ const Background: React.FC = () => {
           repeatType: "loop",
         }}
       />
-
-      {/* More angular transformation (robot-like) */}
       <motion.polygon
         points="160,30 180,120 160,180 140,120"
         fill="url(#gradient2)"
@@ -128,7 +139,6 @@ const Background: React.FC = () => {
       />
 
       <defs>
-        {/* Gradient for mechanical shape */}
         <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style={{ stopColor: "#ff0080", stopOpacity: 1 }} />
           <stop
@@ -136,8 +146,6 @@ const Background: React.FC = () => {
             style={{ stopColor: "#00ff80", stopOpacity: 1 }}
           />
         </linearGradient>
-
-        {/* Gradient for star shape */}
         <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style={{ stopColor: "#ff6347", stopOpacity: 1 }} />
           <stop

@@ -1,10 +1,29 @@
 "use client";
 
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
-const PricingEnterprisePlanCard: React.FC<Link> = ({ href }) => {
+const PricingEnterprisePlanCard: React.FC<PricingButton> = ({
+  href,
+  isToggle,
+}) => {
+  const monthlyPrice = 499;
+  const yearlyPrice = 499 * 12;
+
+  const base = useMotionValue(monthlyPrice);
+
+  const animatedValue = useSpring(base, {
+    stiffness: 100,
+    damping: 20,
+  });
+
+  const rounded = useTransform(animatedValue, (val) => `$${Math.round(val)}`);
+
+  useEffect(() => {
+    base.set(isToggle ? yearlyPrice : monthlyPrice);
+  }, [isToggle, base]);
+
   return (
     <motion.div
       whileHover="hover"
@@ -31,7 +50,7 @@ const PricingEnterprisePlanCard: React.FC<Link> = ({ href }) => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="my-2 block origin-top-left font-mono text-5xl leading-[1.2] font-extrabold"
         >
-          $499
+          <motion.span>{rounded}</motion.span>
           <br />
           Month
         </motion.span>

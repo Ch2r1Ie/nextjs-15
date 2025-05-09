@@ -1,14 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const RevealLinks: React.FC = () => {
-  return (
-    <section className="grid place-content-center gap-4 text-white">
-      <FlipLink href="#">Pricing</FlipLink>
-    </section>
-  );
-};
-
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
@@ -17,7 +9,37 @@ interface FlipLinkProps {
   children: React.ReactNode;
 }
 
-const FlipLink: React.FC<FlipLinkProps> = ({ children, href }) => {
+export const RevealLinks: React.FC = () => {
+  const pastelColors = [
+    "text-pink-300",
+    "text-purple-300",
+    "text-blue-300",
+    "text-green-300",
+    "text-yellow-300",
+    "text-rose-300",
+    "text-indigo-300",
+  ];
+
+  return (
+    <section className="grid place-content-center font-mono">
+      <FlipLink href="#" pastelColors={pastelColors}>
+        Pricing
+      </FlipLink>
+    </section>
+  );
+};
+
+interface FlipLinkProps {
+  href: string;
+  children: React.ReactNode;
+  pastelColors: string[];
+}
+
+const FlipLink: React.FC<FlipLinkProps> = ({
+  children,
+  href,
+  pastelColors,
+}) => {
   const text = typeof children === "string" ? children : "";
 
   return (
@@ -46,8 +68,8 @@ const FlipLink: React.FC<FlipLinkProps> = ({ children, href }) => {
               ease: "easeInOut",
               delay: STAGGER * i,
             }}
-            className="inline-block"
-            key={i}
+            className={`inline-block ${pastelColors[i % pastelColors.length]}`}
+            key={`top-${i}`}
           >
             {l}
           </motion.span>
@@ -69,8 +91,8 @@ const FlipLink: React.FC<FlipLinkProps> = ({ children, href }) => {
               ease: "easeInOut",
               delay: STAGGER * i,
             }}
-            className="inline-block"
-            key={i}
+            className={`inline-block ${pastelColors[i % pastelColors.length]}`}
+            key={`bottom-${i}`}
           >
             {l}
           </motion.span>

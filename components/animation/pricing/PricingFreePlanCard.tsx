@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
 
-const PricingFreePlanCard: React.FC<Link> = ({ href }) => {
+const PricingFreePlanCard: React.FC<PricingButton> = ({ href }) => {
   return (
     <motion.div
       whileHover="hover"
