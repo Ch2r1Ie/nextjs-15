@@ -1,10 +1,12 @@
 "use client";
 
-import React, { useRef, useState, ReactNode } from "react";
+import React, { useRef, useState, ReactNode, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { LoginForm } from "@/components/layout/login/login-form";
 import { DragCloseDrawer } from "./Animate-ShootUp";
+import { AnimatedHamburgerButton } from "@/components/animation/home/Animate-HamburgerButton";
+import { Codepen, LogIn } from "lucide-react";
 
 interface NavBarTabsProps {
   isToggleLogIn: boolean;
@@ -19,6 +21,8 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({ isToggleLogIn }) => {
 
   const [isVisible, setIsVisible] = useState(isToggleLogIn);
   const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [Hamburger, setHamburger] = useState(false);
 
   return (
     <div>
@@ -56,45 +60,120 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({ isToggleLogIn }) => {
         </DragCloseDrawer>
       </div>
 
-      <ul
-        onMouseLeave={() => {
-          setPosition((pv) => ({
-            ...pv,
-            opacity: 0,
-          }));
-        }}
-        className="absolute top-10 left-1/2 mx-auto flex w-fit -translate-x-1/2 -translate-y-1/2 transform rounded-full border-2 border-black p-1 font-mono md:top-15"
-      >
-        <Tab setPosition={setPosition} className="hover:text-white">
-          Ours
-        </Tab>
-        <Link href="/pricing" passHref>
+      <nav>
+        <ul
+          onMouseLeave={() => {
+            setPosition((pv) => ({
+              ...pv,
+              opacity: 0,
+            }));
+          }}
+          className="absolute top-10 left-1/2 hidden w-fit -translate-x-1/2 -translate-y-1/2 transform rounded-full border-2 border-black p-1 font-mono md:flex"
+        >
           <Tab setPosition={setPosition} className="hover:text-white">
-            Pricing
+            Ours
           </Tab>
-        </Link>
-        <Tab
-          setPosition={setPosition}
-          className="hover:text-white"
-          onClick={() => setOpen(true)}
-        >
-          Docs
-        </Tab>
-        <Tab
-          setPosition={setPosition}
-          className={`rounded-full transition-colors duration-300 hover:cursor-pointer ${
-            isVisible
-              ? "bg-red-700 text-white hover:bg-red-800"
-              : "bg-green-300 text-black hover:bg-emerald-300"
-          }`}
-        >
-          <motion.button onClick={() => setIsVisible(!isVisible)}>
-            {isVisible ? "CLOSE" : "LOGIN"}
-          </motion.button>
-        </Tab>
+          <Link href="/pricing" passHref>
+            <Tab setPosition={setPosition} className="hover:text-white">
+              Pricing
+            </Tab>
+          </Link>
+          <Tab
+            setPosition={setPosition}
+            className="hover:text-white"
+            onClick={() => setOpen(true)}
+          >
+            Docs
+          </Tab>
+          <Tab
+            setPosition={setPosition}
+            className={`rounded-full transition-colors duration-300 hover:cursor-pointer ${
+              isVisible
+                ? "bg-red-700 text-white hover:bg-red-800"
+                : "bg-green-300 text-black hover:bg-emerald-300"
+            }`}
+          >
+            <motion.button onClick={() => setIsVisible(!isVisible)}>
+              {isVisible ? "CLOSE" : "LOGIN"}
+            </motion.button>
+          </Tab>
 
-        <Cursor position={position} />
-      </ul>
+          <Cursor position={position} />
+        </ul>
+
+        <div className="b border- fixed top-0 right-0 flex h-18 w-full items-center justify-between border-b-2 border-black bg-gradient-to-br hover:cursor-pointer md:hidden">
+          <div className="ml-3 flex items-center">
+            <Codepen
+              className={`h-16 w-16 ${isVisible ? "text-pink-600" : "text-blue-600"} ${Hamburger ? "text-orange-400" : "text-blue-600"}`}
+            />
+          </div>
+          <div className="flex items-center">
+            <div className="mr-2 flex items-center justify-center">
+              <motion.button
+                onClick={() => {
+                  setIsVisible((prev) => {
+                    if (!prev) setMobileOpen(false);
+                    return !prev;
+                  });
+
+                  setHamburger((pv) => !pv);
+                }}
+              >
+                <div
+                  className={`flex w-fit items-center bg-green-500 px-3 py-2 font-medium text-white shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+                    isVisible
+                      ? "bg-red-600 text-white"
+                      : "bg-green-500 text-black"
+                  }`}
+                >
+                  {isVisible ? "CLOSE" : "LOGIN"}
+                  <LogIn className="ml-1 h-4 w-4 rotate-90 text-white" />
+                </div>
+              </motion.button>
+            </div>
+
+            <AnimatedHamburgerButton
+              onClick={() => {
+                setMobileOpen((prev) => {
+                  if (!prev) setIsVisible(false);
+                  return !prev;
+                });
+                setHamburger((pv) => !pv);
+              }}
+              isToggle={mobileOpen}
+            />
+          </div>
+        </div>
+
+        {mobileOpen && (
+          <div className="absolute top-16 right-0 left-0 z-[9999] flex h-[calc(100vh-4rem)] flex-col justify-end overflow-hidden px-2 py-8 font-mono shadow-md md:hidden">
+            <div className="pb-6">
+              <Tab setPosition={setPosition} className="text-[64px] text-black">
+                Ours
+              </Tab>
+              <Link href="/pricing" passHref>
+                <Tab
+                  setPosition={setPosition}
+                  className="text-[64px] text-black"
+                >
+                  Pricing
+                </Tab>
+              </Link>
+              <Tab
+                setPosition={setPosition}
+                className="text-[64px] text-black"
+                onClick={() => {
+                  setOpen(true);
+                  setMobileOpen(false);
+                  setHamburger(false);
+                }}
+              >
+                Docs
+              </Tab>
+            </div>
+          </div>
+        )}
+      </nav>
     </div>
   );
 };
