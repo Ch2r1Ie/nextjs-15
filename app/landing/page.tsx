@@ -1,16 +1,10 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
-import NavBarTabs from "@/components/animation/landing/Animate-Navbar";
+import { Suspense } from "react";
+import LandingPageClient from "./landing";
 
 export default function LandingPage() {
-  const searchParams = useSearchParams();
-  const isToggleLogIn = searchParams.get("isToggleLogIn");
-  const toggleLogIn = isToggleLogIn === "true";
-
   return (
-    <div>
-      <NavBarTabs isToggleLogIn={toggleLogIn} />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <LandingPageClient />
+    </Suspense>
   );
 }
