@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, ReactNode, useEffect } from "react";
+import React, { useRef, useState, ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { LoginForm } from "@/components/layout/login/login-form";

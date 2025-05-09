@@ -26,7 +26,7 @@ export const AnimatedHamburgerButton: React.FC<
           onClick();
         }}
         className={`relative h-18 w-18 transition-colors hover:cursor-pointer ${
-          isToggle ? "bg-orange-600 text-white" : "bg-purple-600 text-black"
+          active ? "bg-orange-600 text-white" : "bg-purple-600 text-black"
         }`}
       >
         <motion.span
