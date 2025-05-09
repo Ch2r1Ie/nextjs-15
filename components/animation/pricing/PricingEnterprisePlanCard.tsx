@@ -38,7 +38,7 @@ const PricingEnterprisePlanCard: React.FC<PricingButton> = ({
         },
       }}
       initial={{ height: "270px" }}
-      className="relative h-96 w-80 shrink-0 overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-gray-800 p-8 md:w-60 xl:w-80"
+      className="relative h-96 w-80 shrink-0 overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-gray-800 p-8 hover:cursor-pointer md:w-60 xl:w-80"
     >
       <div className="relative z-10 text-white">
         <span className="mb-3 block w-fit rounded-full bg-white/20 px-3 py-0.5 text-sm font-light text-white">

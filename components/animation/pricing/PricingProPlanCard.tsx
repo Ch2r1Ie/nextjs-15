@@ -35,7 +35,7 @@ const PricingProPlanCard: React.FC<PricingButton> = ({ href, isToggle }) => {
         },
       }}
       initial={{ height: "270px" }}
-      className="relative h-96 w-80 shrink-0 overflow-hidden rounded-xl bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 p-8 md:w-60 xl:w-80"
+      className="relative h-96 w-80 shrink-0 overflow-hidden rounded-xl bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 p-8 hover:cursor-pointer md:w-60 xl:w-80"
     >
       <div className="relative z-10 text-white">
         <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
