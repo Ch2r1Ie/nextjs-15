@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import NavBarTabs from "@/components/animation/landing/Animate-Navbar";
 
-export const LandingPages = () => {
+export default function LandingPage() {
   const searchParams = useSearchParams();
   const isToggleLogIn = searchParams.get("isToggleLogIn");
   const toggleLogIn = isToggleLogIn === "true";
@@ -13,6 +13,4 @@ export const LandingPages = () => {
       <NavBarTabs isToggleLogIn={toggleLogIn} />
     </div>
   );
-};
-
-export default LandingPages;
+}
