@@ -6,8 +6,6 @@ import LoadingSpinner from "@/components/loading/loader-spinner";
 export default async function Home() {
   const authenticaiton = await isAuthenticated();
 
-  console.log(authenticaiton);
-
   return (
     <Suspense fallback={<LoadingSpinner />}>
       <HomeClientSide isAuthentication={authenticaiton} />

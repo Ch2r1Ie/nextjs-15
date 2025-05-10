@@ -25,9 +25,7 @@ export const AnimatedHamburgerButton: React.FC<
           setActive((pv) => !pv);
           onClick();
         }}
-        className={`relative h-18 w-18 transition-colors hover:cursor-pointer ${
-          active ? "bg-orange-600 text-white" : "bg-purple-600 text-black"
-        }`}
+        className="relative h-18 w-18 bg-black transition-colors hover:cursor-pointer"
       >
         <motion.span
           variants={VARIANTS.top}

@@ -7,6 +7,7 @@ import { LoginForm } from "@/components/layout/login/login-form";
 import { DragCloseDrawer } from "./Animate-ShootUp";
 import { AnimatedHamburgerButton } from "@/components/animation/home/Animate-HamburgerButton";
 import { Codepen, LogIn } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface NavBarTabsProps {
   isToggleLogIn: boolean;
@@ -72,7 +73,7 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({
               opacity: 0,
             }));
           }}
-          className="absolute top-15 left-1/2 hidden w-fit -translate-x-1/2 -translate-y-1/2 transform rounded-full border-2 border-black p-1 font-mono md:flex"
+          className="absolute top-15 left-1/2 hidden w-fit -translate-x-1/2 -translate-y-1/2 transform p-1 font-mono md:flex"
         >
           <Tab setPosition={setPosition} className="hover:text-white">
             Ours
@@ -114,36 +115,8 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({
           </Tab>
           <Cursor position={position} />
         </ul>
-        <div className="b border- fixed top-0 right-0 flex h-18 w-full items-center justify-between border-b-2 border-black bg-gradient-to-br hover:cursor-pointer md:hidden">
+        <div className="fixed top-0 left-0 flex h-18 w-full items-center justify-between border-b-2 border-black bg-black bg-gradient-to-br hover:cursor-pointer md:hidden">
           <div className="ml-3 flex items-center">
-            <Codepen
-              className={`h-16 w-16 ${isVisible ? "text-pink-600" : "text-blue-600"} ${Hamburger ? "text-orange-400" : "text-blue-600"}`}
-            />
-          </div>
-          <div className="flex items-center">
-            <div className="mr-2 flex items-center justify-center">
-              <motion.button
-                onClick={() => {
-                  setIsVisible((prev) => {
-                    if (!prev) setMobileOpen(false);
-                    return !prev;
-                  });
-
-                  setHamburger((pv) => !pv);
-                }}
-              >
-                <div
-                  className={`flex w-fit items-center bg-green-500 px-3 py-2 font-medium text-white shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
-                    isVisible
-                      ? "bg-red-600 text-white"
-                      : "bg-green-500 text-black"
-                  }`}
-                >
-                  {isVisible ? "CLOSE" : "LOGIN"}
-                  <LogIn className="ml-1 h-4 w-4 rotate-90 text-white" />
-                </div>
-              </motion.button>
-            </div>
             <AnimatedHamburgerButton
               onClick={() => {
                 setMobileOpen((prev) => {
@@ -154,6 +127,45 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({
               }}
               isToggle={mobileOpen}
             />
+          </div>
+          <div className="flex items-center">
+            <div className="mr-2 flex items-center justify-center">
+              {/* <motion.button
+                onClick={() => {
+                  setIsVisible((prev) => {
+                    if (!prev) setMobileOpen(false);
+                    return !prev;
+                  });
+
+                  setHamburger((pv) => !pv);
+                }}
+              > */}
+              {/* <div
+                  className={`flex w-fit items-center bg-green-500 px-3 py-2 font-medium text-white shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+                    isVisible
+                      ? "bg-red-600 text-white"
+                      : "bg-green-500 text-black"
+                  }`}
+                >
+                  {isVisible ? "CLOSE" : "LOGIN"}
+                  <LogIn className="ml-1 h-4 w-4 rotate-90 text-white" />
+                </div> */}
+              <Button
+                variant="ghost"
+                className="py-5 font-mono text-2xl text-gray-300"
+                onClick={() => {
+                  setIsVisible((prev) => {
+                    if (!prev) setMobileOpen(false);
+                    return !prev;
+                  });
+
+                  setHamburger((pv) => !pv);
+                }}
+              >
+                {isVisible ? "CLOSE" : "LOGIN"}
+              </Button>
+              {/* </motion.button> */}
+            </div>
           </div>
         </div>
 
