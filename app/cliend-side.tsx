@@ -3,10 +3,19 @@
 import { useSearchParams } from "next/navigation";
 import NavBarTabs from "@/components/animation/home/Animate-Navbar";
 
-export default function HomeClientSide() {
+type Props = {
+  isAuthentication: boolean;
+};
+
+export default function HomeClientSide({ isAuthentication }: Props) {
   const searchParams = useSearchParams();
   const isToggleLogIn = searchParams.get("isToggleLogIn");
   const toggleLogIn = isToggleLogIn === "true";
 
-  return <NavBarTabs isToggleLogIn={toggleLogIn} />;
+  return (
+    <NavBarTabs
+      isToggleLogIn={toggleLogIn}
+      isAuthentication={isAuthentication}
+    />
+  );
 }

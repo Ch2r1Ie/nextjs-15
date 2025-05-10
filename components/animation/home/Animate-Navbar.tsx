@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef, useState, ReactNode } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { useRef, useState, ReactNode } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { LoginForm } from "@/components/layout/login/login-form";
 import { DragCloseDrawer } from "./Animate-ShootUp";
 import { AnimatedHamburgerButton } from "@/components/animation/home/Animate-HamburgerButton";
@@ -10,9 +10,13 @@ import { Codepen, LogIn } from "lucide-react";
 
 interface NavBarTabsProps {
   isToggleLogIn: boolean;
+  isAuthentication: boolean;
 }
 
-const NavBarTabs: React.FC<NavBarTabsProps> = ({ isToggleLogIn }) => {
+const NavBarTabs: React.FC<NavBarTabsProps> = ({
+  isToggleLogIn,
+  isAuthentication,
+}) => {
   const [position, setPosition] = useState({
     left: 0,
     width: 0,
@@ -93,14 +97,18 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({ isToggleLogIn }) => {
                 : "bg-green-300 text-black hover:bg-emerald-300"
             }`}
           >
-            <motion.button onClick={() => setIsVisible(!isVisible)}>
-              {isVisible ? "CLOSE" : "LOGIN"}
-            </motion.button>
+            {isAuthentication ? (
+              <Link href="/avatar">
+                <motion.button>{isVisible ? "CLOSE" : "LOGIN"}</motion.button>
+              </Link>
+            ) : (
+              <motion.button onClick={() => setIsVisible(!isVisible)}>
+                {isVisible ? "CLOSE" : "LOGIN"}
+              </motion.button>
+            )}
           </Tab>
-
           <Cursor position={position} />
         </ul>
-
         <div className="b border- fixed top-0 right-0 flex h-18 w-full items-center justify-between border-b-2 border-black bg-gradient-to-br hover:cursor-pointer md:hidden">
           <div className="ml-3 flex items-center">
             <Codepen
@@ -131,7 +139,6 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({ isToggleLogIn }) => {
                 </div>
               </motion.button>
             </div>
-
             <AnimatedHamburgerButton
               onClick={() => {
                 setMobileOpen((prev) => {

@@ -1,6 +1,5 @@
-import React from "react";
-import UserItem from "@/components/layout/content/UserItem";
 import { auth } from "@/actions/(auth)/use-auth";
+import UserItem from "@/components/layout/content/UserItem";
 import SideBarCommand from "@/components/layout/content/SideBarCommand";
 
 export default async function Content() {
