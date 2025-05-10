@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
 
-const PricingFreePlanCard: React.FC<PricingButton> = ({ href }) => {
+const PricingFreePlanCard: React.FC<PricingButton> = ({ href, isToggle }) => {
   return (
     <motion.div
       whileHover="hover"
@@ -40,7 +40,7 @@ const PricingFreePlanCard: React.FC<PricingButton> = ({ href }) => {
         >
           $0
           <br />
-          Month
+          {isToggle ? "Annual" : "Month"}
         </motion.span>
       </div>
       <Link href={href}>

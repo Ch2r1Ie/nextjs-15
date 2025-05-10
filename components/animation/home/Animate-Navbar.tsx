@@ -99,10 +99,15 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({
           >
             {isAuthentication ? (
               <Link href="/avatar">
-                <motion.button>{isVisible ? "CLOSE" : "LOGIN"}</motion.button>
+                <motion.button className="hover:cursor-pointer">
+                  {isVisible ? "CLOSE" : "LOGIN"}
+                </motion.button>
               </Link>
             ) : (
-              <motion.button onClick={() => setIsVisible(!isVisible)}>
+              <motion.button
+                onClick={() => setIsVisible(!isVisible)}
+                className="hover:cursor-pointer"
+              >
                 {isVisible ? "CLOSE" : "LOGIN"}
               </motion.button>
             )}

@@ -7,14 +7,11 @@ import Link from "next/link";
 const PricingProPlanCard: React.FC<PricingButton> = ({ href, isToggle }) => {
   const monthlyPrice = 299;
   const yearlyPrice = 299 * 12;
-
   const base = useMotionValue(monthlyPrice);
-
   const animatedValue = useSpring(base, {
     stiffness: 100,
     damping: 20,
   });
-
   const rounded = useTransform(animatedValue, (val) => `$${Math.round(val)}`);
 
   useEffect(() => {
@@ -56,7 +53,7 @@ const PricingProPlanCard: React.FC<PricingButton> = ({ href, isToggle }) => {
         >
           <motion.span>{rounded}</motion.span>
           <br />
-          Month
+          {isToggle ? "Annual" : "Month"}
         </motion.span>
       </div>
       <Link href={href}>

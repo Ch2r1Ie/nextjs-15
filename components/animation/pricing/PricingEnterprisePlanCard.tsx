@@ -48,11 +48,11 @@ const PricingEnterprisePlanCard: React.FC<PricingButton> = ({
           initial={{ scale: 0.85 }}
           variants={{ hover: { scale: 1 } }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="my-2 block origin-top-left font-mono text-5xl leading-[1.2] font-extrabold"
+          className="my-2 block origin-top-left font-mono text-6xl leading-[1.2] font-extrabold"
         >
           <motion.span>{rounded}</motion.span>
           <br />
-          Month
+          {isToggle ? "Annual" : "Month"}
         </motion.span>
       </div>
       <Link href={href}>

@@ -56,7 +56,7 @@ const PricingPlusPlanCard: React.FC<PricingButton> = ({ href, isToggle }) => {
         >
           <motion.span>{rounded}</motion.span>
           <br />
-          Month
+          {isToggle ? "Annual" : "Month"}
         </motion.span>
       </div>
       <Link href={href}>
