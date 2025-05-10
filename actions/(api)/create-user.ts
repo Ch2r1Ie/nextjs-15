@@ -3,7 +3,8 @@
 export const createUser = async (accessToken: string, providers: string) => {
   const url = `${process.env.BACKEND_DOMAIN}${process.env.REGISTER_PATH}`;
 
-  const response = await fetch(url, {
+  const response = await fetch(url, { 
+    
     method: "POST",
     headers: {
       "Content-Type": "application/json",
