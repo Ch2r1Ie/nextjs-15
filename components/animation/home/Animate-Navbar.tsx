@@ -68,7 +68,7 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({ isToggleLogIn }) => {
               opacity: 0,
             }));
           }}
-          className="absolute top-10 left-1/2 hidden w-fit -translate-x-1/2 -translate-y-1/2 transform rounded-full border-2 border-black p-1 font-mono md:flex"
+          className="absolute top-15 left-1/2 hidden w-fit -translate-x-1/2 -translate-y-1/2 transform rounded-full border-2 border-black p-1 font-mono md:flex"
         >
           <Tab setPosition={setPosition} className="hover:text-white">
             Ours
