@@ -8,7 +8,7 @@ interface UserItemProps {
 
 const UserItem: React.FC<UserItemProps> = ({ name, email, imageUrl }) => {
   return (
-    <div className="flex items-center justify-between gap-2 rounded-[8px] border p-2">
+    <div className="flex items-center justify-between gap-2 rounded-[8px] border p-2 hover:cursor-pointer">
       <img
         src={imageUrl}
         alt={name}
