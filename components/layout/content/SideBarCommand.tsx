@@ -26,10 +26,6 @@ interface SideBarItems {
   items: SideBarItem[];
 }
 
-interface SideBar {
-  menuList: SideBarItems[];
-}
-
 export default function SideBarCommand() {
   const menuList = [
     {
