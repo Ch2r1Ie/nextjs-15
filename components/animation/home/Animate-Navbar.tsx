@@ -26,11 +26,10 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({
   const [isVisible, setIsVisible] = useState(isToggleLogIn);
   const [open, setOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  // const [Hamburger, setHamburger] = useState(false);
 
   return (
     <div>
-      <div className="item-center mt-50 flex justify-center">
+      <div className="item-center mt-45 flex justify-center md:mt-50">
         <AnimatePresence initial={false}>
           {isVisible && (
             <motion.div
@@ -126,6 +125,7 @@ const NavBarTabs: React.FC<NavBarTabsProps> = ({
               isToggle={mobileOpen}
             />
           </div>
+
           <div className="flex items-center">
             <div className="mr-2 flex items-center justify-center">
               <Button
