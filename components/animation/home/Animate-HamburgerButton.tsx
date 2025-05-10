@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { MotionConfig, motion, Variants } from "framer-motion";
 
 interface AnimatedHamburgerButtonProps {
@@ -9,8 +8,6 @@ interface AnimatedHamburgerButtonProps {
 export const AnimatedHamburgerButton: React.FC<
   AnimatedHamburgerButtonProps
 > = ({ onClick, isToggle }) => {
-  const [active, setActive] = useState<boolean>(false);
-
   return (
     <MotionConfig
       transition={{
@@ -22,24 +19,23 @@ export const AnimatedHamburgerButton: React.FC<
         initial={false}
         animate={isToggle ? "open" : "closed"}
         onClick={() => {
-          setActive((pv) => !pv);
           onClick();
         }}
-        className="relative h-18 w-18 bg-black transition-colors hover:cursor-pointer"
+        className="relative h-18 w-18 transition-colors hover:cursor-pointer"
       >
         <motion.span
           variants={VARIANTS.top}
-          className="absolute h-1 w-10 bg-white"
+          className="absolute h-0.5 w-8 bg-black"
           style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
         />
         <motion.span
           variants={VARIANTS.middle}
-          className="absolute h-1 w-10 bg-white"
+          className="absolute h-0.5 w-8 bg-black"
           style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
         />
         <motion.span
           variants={VARIANTS.bottom}
-          className="absolute h-1 w-5 bg-white"
+          className="absolute h-0.5 w-3 bg-black"
           style={{
             x: "-50%",
             y: "50%",
