@@ -13,6 +13,8 @@ const UserItem: React.FC<UserItemProps> = ({ name, email, imageUrl }) => {
       <Image
         src={imageUrl}
         alt={name}
+        width={40}
+        height={40}
         className="h-10 w-10 rounded-full object-cover"
       />
       <div className="grow">
