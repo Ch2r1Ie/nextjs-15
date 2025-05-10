@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface UserItemProps {
   name: string;
@@ -9,7 +10,7 @@ interface UserItemProps {
 const UserItem: React.FC<UserItemProps> = ({ name, email, imageUrl }) => {
   return (
     <div className="flex items-center justify-between gap-2 rounded-[8px] border p-2 hover:cursor-pointer">
-      <img
+      <Image
         src={imageUrl}
         alt={name}
         className="h-10 w-10 rounded-full object-cover"

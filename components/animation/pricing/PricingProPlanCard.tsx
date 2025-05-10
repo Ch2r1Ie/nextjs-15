@@ -19,7 +19,7 @@ const PricingProPlanCard: React.FC<PricingButton> = ({ href, isToggle }) => {
 
   useEffect(() => {
     base.set(isToggle ? yearlyPrice : monthlyPrice);
-  }, [isToggle, base]);
+  }, [isToggle, base, yearlyPrice, monthlyPrice]);
 
   return (
     <motion.div

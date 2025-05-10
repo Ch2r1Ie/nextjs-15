@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import {
   CreditCard,
   Settings,
@@ -17,7 +19,7 @@ import {
 
 interface SideBarItem {
   link: string;
-  icon: any;
+  icon: ReactNode;
   text: string;
 }
 
